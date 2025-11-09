@@ -1,0 +1,18 @@
+
+> @amplify/web@0.0.0 dev /home/rpol/Development/Amplify/AmplifySAAS/apps/web
+> next dev
+
+   [1m[38;2;173;127;168m▲ Next.js 16.0.1[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.211.55.14:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 226ms
+ GET / [34m307[39m in 1346ms[2m (compile: 1214ms, render: 132ms)[22m
+ GET /dashboard/default [32m200[39m in 1865ms[2m (compile: 1546ms, render: 318ms)[22m
+ GET /dashboard/finance [32m200[39m in 854ms[2m (compile: 836ms, render: 18ms)[22m
+ GET /dashboard/default [32m200[39m in 26ms[2m (compile: 3ms, render: 23ms)[22m
+ GET /dashboard/crm [32m200[39m in 666ms[2m (compile: 644ms, render: 22ms)[22m
+ GET /dashboard/finance [32m200[39m in 11ms[2m (compile: 1924µs, render: 9ms)[22m
+ POST /dashboard/finance [32m200[39m in 26ms[2m (compile: 2ms, render: 23ms)[22m
+ GET /auth/v1/register [32m200[39m in 559ms[2m (compile: 455ms, render: 105ms)[22m

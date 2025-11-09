@@ -1,0 +1,16 @@
+{
+  "name": "amplify-saas-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "scripts": {
+  "dev": "turbo run dev --parallel --ui tui",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "generate:presets": "turbo run generate:presets"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}
