@@ -133,12 +133,12 @@ function NotFound() {
                     children: "Go back home"
                 }, void 0, false, {
                     fileName: "[project]/apps/web/src/app/not-found.tsx",
-                    lineNumber: 13,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/apps/web/src/app/not-found.tsx",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 7
             }, this)
         ]

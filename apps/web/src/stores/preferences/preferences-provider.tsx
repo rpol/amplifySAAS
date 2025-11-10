@@ -1,19 +1,23 @@
 "use client";
 
-import { createContext, useContext, useRef } from "react";
+import { createContext, type ReactNode, useContext, useRef } from "react";
 
 import { useStore, type StoreApi } from "zustand";
 
-import { createPreferencesStore, PreferencesState } from "./preferences-store";
+import {
+  createPreferencesStore,
+  type PreferencesState,
+} from "./preferences-store";
 
-const PreferencesStoreContext = createContext<StoreApi<PreferencesState> | null>(null);
+const PreferencesStoreContext =
+  createContext<StoreApi<PreferencesState> | null>(null);
 
 export const PreferencesStoreProvider = ({
   children,
   themeMode,
   themePreset,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   themeMode: PreferencesState["themeMode"];
   themePreset: PreferencesState["themePreset"];
 }) => {
@@ -21,10 +25,16 @@ export const PreferencesStoreProvider = ({
 
   storeRef.current ??= createPreferencesStore({ themeMode, themePreset });
 
-  return <PreferencesStoreContext.Provider value={storeRef.current}>{children}</PreferencesStoreContext.Provider>;
+  return (
+    <PreferencesStoreContext.Provider value={storeRef.current}>
+      {children}
+    </PreferencesStoreContext.Provider>
+  );
 };
 
-export const usePreferencesStore = <T,>(selector: (state: PreferencesState) => T): T => {
+export const usePreferencesStore = <T,>(
+  selector: (state: PreferencesState) => T,
+): T => {
   const store = useContext(PreferencesStoreContext);
   if (!store) throw new Error("Missing PreferencesStoreProvider");
   return useStore(store, selector);

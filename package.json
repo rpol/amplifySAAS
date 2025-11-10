@@ -3,14 +3,28 @@
   "private": true,
   "packageManager": "pnpm@9.12.3",
   "scripts": {
-  "dev": "turbo run dev --parallel --ui tui",
+    "dev": "turbo run dev --parallel --ui tui",
     "build": "turbo run build",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint --ui tui",
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "generate:presets": "turbo run generate:presets"
   },
   "devDependencies": {
-    "turbo": "latest"
+    "@eslint/js": "^9.16.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.1",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-sonarjs": "^3.0.5",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.6.2",
+    "turbo": "latest",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
   }
 }

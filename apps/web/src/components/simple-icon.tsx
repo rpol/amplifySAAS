@@ -1,15 +1,15 @@
 "use client";
 
-import * as React from "react";
+import { type SVGProps } from "react";
 
-import type { SimpleIcon } from "simple-icons";
+import type { SimpleIcon as SimpleIconDescriptor } from "simple-icons";
 
 import { cn } from "@/lib/utils";
 
 type SimpleIconProps = {
-  icon: SimpleIcon;
+  icon: SimpleIconDescriptor;
   className?: string;
-} & React.SVGProps<SVGSVGElement>;
+} & SVGProps<SVGSVGElement>;
 
 export function SimpleIcon({ icon, className, ...props }: SimpleIconProps) {
   const { title, path } = icon;

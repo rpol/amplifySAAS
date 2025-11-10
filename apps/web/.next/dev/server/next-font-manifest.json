@@ -1,11 +1,5 @@
 {
   "app": {
-    "[project]/apps/web/src/app/(external)/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
-    ],
-    "[project]/apps/web/src/app/(main)/auth/v1/register/page": [
-      "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
-    ],
     "[project]/apps/web/src/app/(main)/dashboard/crm/page": [
       "static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2"
     ],

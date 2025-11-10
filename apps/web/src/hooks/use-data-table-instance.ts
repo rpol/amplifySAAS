@@ -32,14 +32,27 @@ export function useDataTableInstance<TData, TValue>({
   getRowId,
 }: UseDataTableInstanceProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({});
-  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [columnVisibility, setColumnVisibility] =
+    React.useState<VisibilityState>({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    [],
+  );
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [pagination, setPagination] = React.useState({
     pageIndex: defaultPageIndex ?? 0,
     pageSize: defaultPageSize ?? 10,
   });
 
+  const fallbackGetRowId = React.useCallback((row: TData, index: number) => {
+    if (typeof row === "object" && row !== null && "id" in row) {
+      const candidate = (row as { id?: string | number }).id;
+      if (typeof candidate === "string") return candidate;
+      if (typeof candidate === "number") return candidate.toString();
+    }
+    return index.toString();
+  }, []);
+
+  /* eslint-disable-next-line react-hooks/incompatible-library -- TanStack Table exposes imperative helpers the React Compiler can't analyze yet. */
   const table = useReactTable({
     data,
     columns,
@@ -51,7 +64,7 @@ export function useDataTableInstance<TData, TValue>({
       pagination,
     },
     enableRowSelection,
-    getRowId: getRowId ?? ((row) => (row as any).id.toString()),
+    getRowId: getRowId ?? fallbackGetRowId,
     onRowSelectionChange: setRowSelection,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,

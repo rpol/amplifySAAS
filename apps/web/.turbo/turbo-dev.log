@@ -7,12 +7,18 @@
    - Network:      http://10.211.55.14:3000
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 226ms
- GET / [34m307[39m in 1346ms[2m (compile: 1214ms, render: 132ms)[22m
- GET /dashboard/default [32m200[39m in 1865ms[2m (compile: 1546ms, render: 318ms)[22m
- GET /dashboard/finance [32m200[39m in 854ms[2m (compile: 836ms, render: 18ms)[22m
- GET /dashboard/default [32m200[39m in 26ms[2m (compile: 3ms, render: 23ms)[22m
- GET /dashboard/crm [32m200[39m in 666ms[2m (compile: 644ms, render: 22ms)[22m
- GET /dashboard/finance [32m200[39m in 11ms[2m (compile: 1924µs, render: 9ms)[22m
- POST /dashboard/finance [32m200[39m in 26ms[2m (compile: 2ms, render: 23ms)[22m
- GET /auth/v1/register [32m200[39m in 559ms[2m (compile: 455ms, render: 105ms)[22m
+ [32m[1m✓[22m[39m Ready in 333ms
+ GET /dashboard/finance [32m200[39m in 3.1s[2m (compile: 2.7s, render: 376ms)[22m
+ GET /dashboard/crm [32m200[39m in 967ms[2m (compile: 946ms, render: 21ms)[22m
+ GET /dashboard/default [32m200[39m in 684ms[2m (compile: 651ms, render: 33ms)[22m
+ GET /dashboard/finance [32m200[39m in 23ms[2m (compile: 4ms, render: 19ms)[22m
+ GET /dashboard/crm [32m200[39m in 14ms[2m (compile: 2ms, render: 12ms)[22m
+ POST /dashboard/crm [32m200[39m in 30ms[2m (compile: 3ms, render: 27ms)[22m
+ POST /dashboard/crm [32m200[39m in 27ms[2m (compile: 3ms, render: 24ms)[22m
+ POST /dashboard/crm [32m200[39m in 31ms[2m (compile: 3ms, render: 28ms)[22m
+ POST /dashboard/crm [32m200[39m in 36ms[2m (compile: 8ms, render: 28ms)[22m
+ POST /dashboard/crm [32m200[39m in 28ms[2m (compile: 3ms, render: 25ms)[22m
+ POST /dashboard/crm [32m200[39m in 20ms[2m (compile: 1889µs, render: 18ms)[22m
+ POST /dashboard/crm [32m200[39m in 31ms[2m (compile: 3ms, render: 28ms)[22m
+ POST /dashboard/crm [32m200[39m in 27ms[2m (compile: 2ms, render: 25ms)[22m
+ POST /dashboard/crm [32m200[39m in 29ms[2m (compile: 4ms, render: 24ms)[22m

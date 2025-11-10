@@ -15,11 +15,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f
 ;
 function SimpleIcon(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(17);
-    if ($[0] !== "150a7b3bc681d68c3500a7c1d3fbc317dba8095996cb1e68e4a587704ce74804") {
+    if ($[0] !== "3477cab2b6e5446ef60846a7932d136c20759f1104fb1a5331c87924faaed76d") {
         for(let $i = 0; $i < 17; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "150a7b3bc681d68c3500a7c1d3fbc317dba8095996cb1e68e4a587704ce74804";
+        $[0] = "3477cab2b6e5446ef60846a7932d136c20759f1104fb1a5331c87924faaed76d";
     }
     let className;
     let icon;
@@ -135,11 +135,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f
 ;
 function Card(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -182,11 +182,11 @@ function Card(t0) {
 _c = Card;
 function CardHeader(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -229,11 +229,11 @@ function CardHeader(t0) {
 _c1 = CardHeader;
 function CardTitle(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -276,11 +276,11 @@ function CardTitle(t0) {
 _c2 = CardTitle;
 function CardDescription(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -323,11 +323,11 @@ function CardDescription(t0) {
 _c3 = CardDescription;
 function CardAction(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -370,11 +370,11 @@ function CardAction(t0) {
 _c4 = CardAction;
 function CardContent(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -417,11 +417,11 @@ function CardContent(t0) {
 _c5 = CardContent;
 function CardFooter(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947") {
+    if ($[0] !== "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "82896d17a6dda3f36c69d8506eca599611e5e9d1ca1c1946b81fd4cc43ad4947";
+        $[0] = "80bd92bdabec4671a8ed87c382e03e7f318ec39a732109b86f159e1cc028f1af";
     }
     let className;
     let props;
@@ -499,11 +499,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f
 ;
 function Tabs(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420") {
+    if ($[0] !== "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420";
+        $[0] = "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c";
     }
     let className;
     let props;
@@ -546,11 +546,11 @@ function Tabs(t0) {
 _c = Tabs;
 function TabsList(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420") {
+    if ($[0] !== "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420";
+        $[0] = "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c";
     }
     let className;
     let props;
@@ -593,11 +593,11 @@ function TabsList(t0) {
 _c1 = TabsList;
 function TabsTrigger(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420") {
+    if ($[0] !== "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420";
+        $[0] = "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c";
     }
     let className;
     let props;
@@ -640,11 +640,11 @@ function TabsTrigger(t0) {
 _c2 = TabsTrigger;
 function TabsContent(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420") {
+    if ($[0] !== "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "56770c15283f29bd05ee1b16ea2891676d5064c818446bdb9829ccc96aa91420";
+        $[0] = "269a4db3a3d365366031aee495ad1f17fb25c6736b37bdf37601a850baf1dc4c";
     }
     let className;
     let props;
@@ -725,11 +725,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f
 ;
 function ChipSVG() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "cd38475a1b8dac7b91bf751189c4ca5aab3b2c7bea4446f74423b8e134f08cbb") {
+    if ($[0] !== "40f1cfe8c9429f6dcb5a5041f4d0b8767ff5c20d56159391283f525522602e3c") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "cd38475a1b8dac7b91bf751189c4ca5aab3b2c7bea4446f74423b8e134f08cbb";
+        $[0] = "40f1cfe8c9429f6dcb5a5041f4d0b8767ff5c20d56159391283f525522602e3c";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -883,11 +883,11 @@ const recentPayments = [
 ];
 function AccountOverview() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(16);
-    if ($[0] !== "cd38475a1b8dac7b91bf751189c4ca5aab3b2c7bea4446f74423b8e134f08cbb") {
+    if ($[0] !== "40f1cfe8c9429f6dcb5a5041f4d0b8767ff5c20d56159391283f525522602e3c") {
         for(let $i = 0; $i < 16; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "cd38475a1b8dac7b91bf751189c4ca5aab3b2c7bea4446f74423b8e134f08cbb";
+        $[0] = "40f1cfe8c9429f6dcb5a5041f4d0b8767ff5c20d56159391283f525522602e3c";
     }
     let t0;
     let t1;
@@ -1484,11 +1484,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f
 ;
 function CurrencySelector(props) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "c57410ddb50254f11a2f82d1875d04c0b44fcae7f8c41837068f47ffdb0a3aee") {
+    if ($[0] !== "8830080fdc7a197dbbb6f0369fe2d69392253fbf6e292be520d129c9bbd40e93") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c57410ddb50254f11a2f82d1875d04c0b44fcae7f8c41837068f47ffdb0a3aee";
+        $[0] = "8830080fdc7a197dbbb6f0369fe2d69392253fbf6e292be520d129c9bbd40e93";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1580,11 +1580,11 @@ function CurrencySelector(props) {
 _c = CurrencySelector;
 function CurrencyExchange() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(17);
-    if ($[0] !== "c57410ddb50254f11a2f82d1875d04c0b44fcae7f8c41837068f47ffdb0a3aee") {
+    if ($[0] !== "8830080fdc7a197dbbb6f0369fe2d69392253fbf6e292be520d129c9bbd40e93") {
         for(let $i = 0; $i < 17; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c57410ddb50254f11a2f82d1875d04c0b44fcae7f8c41837068f47ffdb0a3aee";
+        $[0] = "8830080fdc7a197dbbb6f0369fe2d69392253fbf6e292be520d129c9bbd40e93";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1730,14 +1730,15 @@ function CurrencyExchange() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "text-muted-foreground text-xs font-medium",
                     children: [
-                        "Available: ",
+                        "Available:",
+                        " ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-foreground",
                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(13100.06)
                         }, void 0, false, {
                             fileName: "[project]/apps/web/src/app/(main)/dashboard/finance/_components/currency-exchange.tsx",
                             lineNumber: 95,
-                            columnNumber: 139
+                            columnNumber: 143
                         }, this)
                     ]
                 }, void 0, true, {
@@ -2006,11 +2007,11 @@ const ChartContext = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d
 function useChart() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(1);
-    if ($[0] !== "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79") {
+    if ($[0] !== "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94") {
         for(let $i = 0; $i < 1; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79";
+        $[0] = "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94";
     }
     const context = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"](ChartContext);
     if (!context) {
@@ -2022,11 +2023,11 @@ _s(useChart, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
 function ChartContainer(t0) {
     _s1();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(28);
-    if ($[0] !== "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79") {
+    if ($[0] !== "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94") {
         for(let $i = 0; $i < 28; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79";
+        $[0] = "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94";
     }
     let children;
     let className;
@@ -2154,11 +2155,11 @@ _s1(ChartContainer, "j7NPILheLIfrWAvm8S/GM4Sml/8=");
 _c = ChartContainer;
 const ChartStyle = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79") {
+    if ($[0] !== "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79";
+        $[0] = "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94";
     }
     const { id, config } = t0;
     let t1;
@@ -2224,11 +2225,11 @@ const ChartTooltip = __TURBOPACK__imported__module__$5b$project$5d2f$node_module
 function ChartTooltipContent(t0) {
     _s2();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(46);
-    if ($[0] !== "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79") {
+    if ($[0] !== "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94") {
         for(let $i = 0; $i < 46; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79";
+        $[0] = "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94";
     }
     const { active, payload, className, indicator: t1, hideLabel: t2, hideIndicator: t3, label, labelFormatter, labelClassName, formatter, color, nameKey, labelKey } = t0;
     const indicator = t1 === undefined ? "dot" : t1;
@@ -2490,11 +2491,11 @@ const ChartLegend = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules
 function ChartLegendContent(t0) {
     _s3();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(16);
-    if ($[0] !== "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79") {
+    if ($[0] !== "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94") {
         for(let $i = 0; $i < 16; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "df6dfc9a900d16ca72a49a3c9bd6954e1da2636fdba49abcc1396fd8b9e3ca79";
+        $[0] = "84dc567ae041d5253aa652a22fff442393852f5daffd66c92f5e76e9a3b60c94";
     }
     const { className, hideIcon: t1, payload, verticalAlign: t2, nameKey } = t0;
     const hideIcon = t1 === undefined ? false : t1;
@@ -2671,11 +2672,11 @@ const chartConfig = {
 };
 function ExpenseSummary() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(19);
-    if ($[0] !== "d5311be1a97e5b4f804f1c2b4cc377c5ff2d3f815591ea89b84132335bc8ef24") {
+    if ($[0] !== "e759c44e50268d91bb506d558188f6d721e72a73335bbfabe485a5d0eb9ddc6e") {
         for(let $i = 0; $i < 19; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d5311be1a97e5b4f804f1c2b4cc377c5ff2d3f815591ea89b84132335bc8ef24";
+        $[0] = "e759c44e50268d91bb506d558188f6d721e72a73335bbfabe485a5d0eb9ddc6e";
     }
     const totalExpenses = chartData.length ? chartData[0].groceries + chartData[0].transport + chartData[0].other : 0;
     let t0;
@@ -3130,7 +3131,8 @@ function ExpenseSummary() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-muted-foreground text-xs tabular-nums",
                             children: [
-                                "Weekly spending is capped at ",
+                                "Weekly spending is capped at",
+                                " ",
                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatCurrency"])(2000, {
                                     noDecimals: true
                                 })
@@ -3287,11 +3289,11 @@ const chartConfig = {
 };
 function FinancialOverview() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(13);
-    if ($[0] !== "7173cbe2c1e3769ac5d644503890f5f426187e0ab7b8ae6fc3ed946f4964203b") {
+    if ($[0] !== "14f7252f5f3f19c90a406a8f3132c6f72fccd92892fd1f99fc4311db83558b85") {
         for(let $i = 0; $i < 13; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "7173cbe2c1e3769ac5d644503890f5f426187e0ab7b8ae6fc3ed946f4964203b";
+        $[0] = "14f7252f5f3f19c90a406a8f3132c6f72fccd92892fd1f99fc4311db83558b85";
     }
     let T0;
     let T1;

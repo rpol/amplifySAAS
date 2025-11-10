@@ -12,8 +12,11 @@ import sonarjs from "eslint-plugin-sonarjs";
 
 const webFiles = ["apps/web/**/*.{js,jsx,ts,tsx}"];
 const apiFiles = ["apps/api/**/*.{js,ts}"];
+const webProjects = ["./tsconfig.base.json", "./apps/web/tsconfig.json"];
+const apiProjects = ["./apps/api/tsconfig.json"];
 
 const sharedPlugins = {
+  "@typescript-eslint": tseslint.plugin,
   import: pluginImport,
   security: securityPlugin,
   prettier,
@@ -22,6 +25,7 @@ const sharedPlugins = {
 };
 
 const sharedRules = {
+  "no-unused-vars": "off",
   "prettier/prettier": "warn",
   "unicorn/filename-case": [
     "error",
@@ -114,7 +118,7 @@ const scopeConfigs = (configs, files, project) =>
     files,
     languageOptions: {
       ...(config.languageOptions ?? {}),
-      parser: "@typescript-eslint/parser",
+      parser: tseslint.parser,
       parserOptions: {
         ...(config.languageOptions?.parserOptions ?? {}),
         project,
@@ -123,9 +127,9 @@ const scopeConfigs = (configs, files, project) =>
   }));
 
 export default defineConfig([
-  ...scopeConfigs(nextVitals, webFiles, ["./tsconfig.base.json", "./apps/web/tsconfig.json"]),
-  ...scopeConfigs(nextTs, webFiles, ["./tsconfig.base.json", "./apps/web/tsconfig.json"]),
-  ...scopeConfigs(tseslint.configs.recommended, webFiles, ["./tsconfig.base.json", "./apps/web/tsconfig.json"]),
+  ...scopeConfigs(nextVitals, webFiles, webProjects),
+  ...scopeConfigs(nextTs, webFiles, webProjects),
+  ...scopeConfigs(tseslint.configs.recommended, webFiles, webProjects),
   {
     ...pluginJs.configs.recommended,
     files: webFiles,
@@ -138,9 +142,9 @@ export default defineConfig([
     files: webFiles,
     languageOptions: {
       globals: globals.browser,
-      parser: "@typescript-eslint/parser",
+      parser: tseslint.parser,
       parserOptions: {
-        project: ["./tsconfig.base.json", "./apps/web/tsconfig.json"],
+        project: webProjects,
       },
     },
     plugins: {
@@ -150,8 +154,15 @@ export default defineConfig([
       ...sharedRules,
       ...reactRules,
     },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          project: webProjects,
+        },
+      },
+    },
   },
-  ...scopeConfigs(tseslint.configs.recommended, apiFiles, ["./apps/api/tsconfig.json"]),
+  ...scopeConfigs(tseslint.configs.recommended, apiFiles, apiProjects),
   {
     ...pluginJs.configs.recommended,
     files: apiFiles,
@@ -164,9 +175,9 @@ export default defineConfig([
     files: apiFiles,
     languageOptions: {
       globals: globals.node,
-      parser: "@typescript-eslint/parser",
+      parser: tseslint.parser,
       parserOptions: {
-        project: ["./apps/api/tsconfig.json"],
+        project: apiProjects,
       },
     },
     plugins: {
@@ -174,6 +185,19 @@ export default defineConfig([
     },
     rules: {
       ...sharedRules,
+    },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          project: apiProjects,
+        },
+      },
+    },
+  },
+  {
+    files: ["apps/web/next-env.d.ts"],
+    rules: {
+      "spaced-comment": "off",
     },
   },
   globalIgnores([

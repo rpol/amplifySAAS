@@ -1,0 +1,5 @@
+
+
+> @amplify/api@0.0.0 lint /home/rpol/Development/Amplify/AmplifySAAS/apps/api
+> eslint "src/**/*.{ts,js}"
+

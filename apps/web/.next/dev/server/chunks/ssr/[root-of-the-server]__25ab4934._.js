@@ -132,8 +132,8 @@ const PreferencesStoreProvider = ({ children, themeMode, themePreset })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/apps/web/src/stores/preferences/preferences-provider.tsx",
-        lineNumber: 24,
-        columnNumber: 10
+        lineNumber: 29,
+        columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
 const usePreferencesStore = (selector)=>{
