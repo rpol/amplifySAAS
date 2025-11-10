@@ -12,12 +12,24 @@ export async function getValueFromCookie(
 export async function setValueToCookie(
   key: string,
   value: string,
-  options: { path?: string; maxAge?: number } = {},
+  options: {
+    path?: string;
+    maxAge?: number;
+    httpOnly?: boolean;
+    secure?: boolean;
+    sameSite?: "strict" | "lax" | "none";
+  } = {},
 ): Promise<void> {
   const cookieStore = await cookies();
   cookieStore.set(key, value, {
     path: options.path ?? "/",
-    maxAge: options.maxAge ?? 60 * 60 * 24 * 7, // default: 7 days
+    // default: 7 days
+    maxAge: options.maxAge ?? 60 * 60 * 24 * 7,
+    httpOnly: options.httpOnly ?? true,
+    secure:
+      options.secure ??
+      (typeof process !== "undefined" && process.env.NODE_ENV === "production"),
+    sameSite: options.sameSite ?? "lax",
   });
 }
 

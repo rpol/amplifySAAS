@@ -1,5 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
+import { useRouter, useSearchParams } from "next/navigation";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -16,6 +20,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  AUTH_API_BASE_URL,
+  SESSION_COOKIE_NAME,
+  calculateCookieMaxAge,
+  resolveRedirectPath,
+  type AuthResponse,
+} from "@/lib/auth";
+import { setValueToCookie } from "@/server/server-actions";
 
 const FormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -26,6 +38,9 @@ const FormSchema = z.object({
 });
 
 export function LoginForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -36,13 +51,45 @@ export function LoginForm() {
   });
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    toast("You submitted the following values", {
-      description: (
-        <pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(`${AUTH_API_BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+          remember: Boolean(data.remember),
+        }),
+      });
+
+      const payload = (await response.json()) as Partial<AuthResponse> & {
+        message?: string;
+      };
+
+      if (!response.ok || !payload?.token || !payload.expiresAt) {
+        const message = payload?.message ?? "Invalid email or password.";
+        toast.error(message);
+        return;
+      }
+
+      const maxAge = calculateCookieMaxAge(payload.expiresAt, payload.maxAge);
+      await setValueToCookie(SESSION_COOKIE_NAME, payload.token, {
+        maxAge,
+      });
+
+      toast.success("Welcome back!");
+      const destination = resolveRedirectPath(searchParams.get("redirect"));
+      router.push(destination);
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Unexpected error while logging in. Please try again.";
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -108,8 +155,8 @@ export function LoginForm() {
             </FormItem>
           )}
         />
-        <Button className="w-full" type="submit">
-          Login
+        <Button className="w-full" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Signing in..." : "Login"}
         </Button>
       </form>
     </Form>

@@ -109,7 +109,11 @@ async function setValueToCookie(key, value, options = {}) {
     const cookieStore = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["cookies"])();
     cookieStore.set(key, value, {
         path: options.path ?? "/",
-        maxAge: options.maxAge ?? 60 * 60 * 24 * 7
+        // default: 7 days
+        maxAge: options.maxAge ?? 60 * 60 * 24 * 7,
+        httpOnly: options.httpOnly ?? true,
+        secure: options.secure ?? (typeof process !== "undefined" && ("TURBOPACK compile-time value", "development") === "production"),
+        sameSite: options.sameSite ?? "lax"
     });
 }
 async function getPreference(key, allowed, fallback) {
