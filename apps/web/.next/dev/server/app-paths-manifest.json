@@ -1,4 +1,5 @@
 {
+  "/(external)/page": "app/(external)/page.js",
   "/(main)/dashboard/crm/page": "app/(main)/dashboard/crm/page.js",
   "/(main)/dashboard/default/page": "app/(main)/dashboard/default/page.js",
   "/(main)/dashboard/finance/page": "app/(main)/dashboard/finance/page.js"

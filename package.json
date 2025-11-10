@@ -8,7 +8,10 @@
     "lint": "turbo run lint --ui tui",
     "format": "turbo run format",
     "format:check": "turbo run format:check",
-    "generate:presets": "turbo run generate:presets"
+    "generate:presets": "turbo run generate:presets",
+    "db:generate": "pnpm exec prisma generate --schema packages/db/prisma/schema.prisma",
+    "db:migrate": "pnpm exec prisma migrate dev --schema packages/db/prisma/schema.prisma",
+    "db:deploy": "pnpm exec prisma migrate deploy --schema packages/db/prisma/schema.prisma"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
@@ -23,6 +26,7 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.15.0",
     "prettier": "^3.6.2",
+    "prisma": "^5.22.0",
     "turbo": "latest",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
