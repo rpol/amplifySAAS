@@ -197,6 +197,7 @@ export default defineConfig([
   {
     files: ["apps/web/next-env.d.ts"],
     rules: {
+      "import/no-unresolved": "off",
       "spaced-comment": "off",
     },
   },

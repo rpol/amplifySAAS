@@ -123,15 +123,16 @@ let AuthService = class AuthService {
     }
     toAuthResponse(user, session) {
         const maxAge = Math.max(0, Math.floor((session.expiresAt.getTime() - Date.now()) / 1000));
+        const userSummary = {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+        };
         return {
             token: session.token,
             expiresAt: session.expiresAt.toISOString(),
             maxAge,
-            user: {
-                id: user.id,
-                email: user.email,
-                name: user.name,
-            },
+            user: userSummary,
         };
     }
 };

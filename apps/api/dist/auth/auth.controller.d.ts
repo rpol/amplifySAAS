@@ -1,7 +1,5 @@
 import { AuthService } from "./auth.service";
-import type { AuthResponse } from "./dto/auth-response.dto";
-import { LoginDto } from "./dto/login.dto";
-import { RegisterDto } from "./dto/register.dto";
+import { LoginDto, RegisterDto, type AuthResponse } from "@amplify/types";
 export declare class AuthController {
     private readonly authService;
     constructor(authService: AuthService);

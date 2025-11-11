@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@amplify/db": "workspace:*",
+    "@amplify/types": "workspace:*",
     "@nestjs/common": "latest",
     "@nestjs/core": "latest",
     "@nestjs/platform-express": "latest",

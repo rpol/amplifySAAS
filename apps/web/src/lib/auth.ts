@@ -7,21 +7,13 @@ export const AUTH_API_BASE_URL =
   process.env.AUTH_API_URL ??
   "http://localhost:3001";
 
-export interface AuthResponse {
-  token: string;
-  expiresAt: string;
-  maxAge: number;
-  user: {
-    id: string;
-    email: string;
-    name: string;
-  };
-}
+export type { AuthResponse } from "@amplify/types";
 
 export function calculateCookieMaxAge(
   expiresAt: string,
   fallbackSeconds = 60 * 60 * 24 * 7,
 ): number {
+  // Ensure cookie expiration stays in sync with server session expiry.
   const expiresAtDate = new Date(expiresAt);
   const diff = Math.floor((expiresAtDate.getTime() - Date.now()) / 1000);
   return Number.isFinite(diff) && diff > 0 ? diff : fallbackSeconds;

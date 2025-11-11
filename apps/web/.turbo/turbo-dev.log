@@ -8,16 +8,16 @@
 
  [32m[1m✓[22m[39m Starting...
  [33m[1m⚠[22m[39m The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
- [32m[1m✓[22m[39m Ready in 414ms
- GET /auth/v2/login?redirect=%2F [32m200[39m in 1805ms[2m (compile: 1587ms, proxy.ts: 2ms, render: 216ms)[22m
- GET /auth/v2/register [32m200[39m in 328ms[2m (compile: 289ms, proxy.ts: 8ms, render: 30ms)[22m
- GET /auth/v2/login [32m200[39m in 29ms[2m (compile: 3ms, proxy.ts: 6ms, render: 20ms)[22m
- GET /auth/v2/register [32m200[39m in 26ms[2m (compile: 3ms, proxy.ts: 6ms, render: 17ms)[22m
- GET /auth/v2/login?redirect=%2F.well-known%2Fappspecific%2Fcom.chrome.devtools.json [32m200[39m in 43ms[2m (compile: 2ms, proxy.ts: 1982µs, render: 38ms)[22m
- POST /auth/v2/register [32m200[39m in 36ms[2m (compile: 3ms, proxy.ts: 5ms, render: 28ms)[22m
- GET /dashboard/default [32m200[39m in 1770ms[2m (compile: 1495ms, proxy.ts: 226ms, render: 49ms)[22m
- GET /dashboard/default [32m200[39m in 541ms[2m (compile: 6ms, proxy.ts: 212ms, render: 323ms)[22m
- GET /auth/v2/login?redirect=%2Fdashboard%2Fdefault [32m200[39m in 58ms[2m (compile: 4ms, proxy.ts: 3ms, render: 51ms)[22m
- GET /auth/v2/login?redirect=%2Fdashboard%2Fdefault [32m200[39m in 61ms[2m (compile: 5ms, proxy.ts: 3ms, render: 53ms)[22m
- POST /auth/v2/login?redirect=%2Fdashboard%2Fdefault [32m200[39m in 32ms[2m (compile: 3ms, proxy.ts: 4ms, render: 24ms)[22m
- GET /dashboard/default [32m200[39m in 209ms[2m (compile: 3ms, proxy.ts: 173ms, render: 34ms)[22m
+ [32m[1m✓[22m[39m Ready in 349ms
+ GET / [34m307[39m in 2.7s[2m (compile: 1291ms, proxy.ts: 1290ms, render: 128ms)[22m
+ GET /dashboard/default [32m200[39m in 1987ms[2m (compile: 1539ms, proxy.ts: 119ms, render: 329ms)[22m
+ GET /auth/v2/login?redirect=%2F [32m200[39m in 655ms[2m (compile: 497ms, proxy.ts: 3ms, render: 155ms)[22m
+ POST /auth/v2/login?redirect=%2F [32m200[39m in 41ms[2m (compile: 5ms, proxy.ts: 8ms, render: 28ms)[22m
+ GET / [32m200[39m in 212ms[2m (compile: 5ms, proxy.ts: 192ms, render: 15ms)[22m
+ GET /dashboard/default [32m200[39m in 165ms[2m (compile: 3ms, proxy.ts: 114ms, render: 47ms)[22m
+ GET /dashboard/default [32m200[39m in 138ms[2m (compile: 1895µs, proxy.ts: 118ms, render: 19ms)[22m
+ POST /dashboard/default [32m200[39m in 138ms[2m (compile: 1981µs, proxy.ts: 112ms, render: 24ms)[22m
+ GET /dashboard/default [32m200[39m in 289ms[2m (compile: 8ms, proxy.ts: 253ms, render: 27ms)[22m
+ GET /dashboard/crm [32m200[39m in 963ms[2m (compile: 824ms, proxy.ts: 114ms, render: 25ms)[22m
+ GET /dashboard/finance [32m200[39m in 817ms[2m (compile: 679ms, proxy.ts: 117ms, render: 21ms)[22m
+ GET /dashboard/default [32m200[39m in 140ms[2m (compile: 6ms, proxy.ts: 112ms, render: 22ms)[22m

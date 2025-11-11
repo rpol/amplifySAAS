@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
+import { type AuthResponse } from "@amplify/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -25,7 +26,6 @@ import {
   SESSION_COOKIE_NAME,
   calculateCookieMaxAge,
   resolveRedirectPath,
-  type AuthResponse,
 } from "@/lib/auth";
 import { setValueToCookie } from "@/server/server-actions";
 

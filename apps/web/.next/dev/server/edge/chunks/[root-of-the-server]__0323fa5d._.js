@@ -30,6 +30,7 @@ const SESSION_COOKIE_NAME = "amplify_session";
 const DEFAULT_AUTH_REDIRECT = "/dashboard/default";
 const AUTH_API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? process.env.AUTH_API_URL ?? "http://localhost:3001";
 function calculateCookieMaxAge(expiresAt, fallbackSeconds = 60 * 60 * 24 * 7) {
+    // Ensure cookie expiration stays in sync with server session expiry.
     const expiresAtDate = new Date(expiresAt);
     const diff = Math.floor((expiresAtDate.getTime() - Date.now()) / 1000);
     return Number.isFinite(diff) && diff > 0 ? diff : fallbackSeconds;

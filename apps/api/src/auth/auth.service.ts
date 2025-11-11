@@ -8,9 +8,12 @@ import { compare, hash } from "bcryptjs";
 
 import { Prisma, prisma, type User } from "@amplify/db";
 
-import { LoginDto } from "./dto/login.dto";
-import { RegisterDto } from "./dto/register.dto";
-import type { AuthResponse } from "./dto/auth-response.dto";
+import {
+  LoginDto,
+  RegisterDto,
+  type AuthResponse,
+  type AuthUserSummary,
+} from "@amplify/types";
 
 const DEFAULT_SESSION_SECONDS = 60 * 60 * 24 * 7; // 7 days
 const REMEMBER_ME_SESSION_SECONDS = 60 * 60 * 24 * 30; // 30 days
@@ -170,16 +173,17 @@ export class AuthService {
       0,
       Math.floor((session.expiresAt.getTime() - Date.now()) / 1000)
     );
+    const userSummary: AuthUserSummary = {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+    };
 
     return {
       token: session.token,
       expiresAt: session.expiresAt.toISOString(),
       maxAge,
-      user: {
-        id: user.id,
-        email: user.email,
-        name: user.name,
-      },
+      user: userSummary,
     };
   }
 }

@@ -9,9 +9,7 @@ import {
 } from "@nestjs/common";
 
 import { AuthService } from "./auth.service";
-import type { AuthResponse } from "./dto/auth-response.dto";
-import { LoginDto } from "./dto/login.dto";
-import { RegisterDto } from "./dto/register.dto";
+import { LoginDto, RegisterDto, type AuthResponse } from "@amplify/types";
 
 @Controller("auth")
 export class AuthController {
@@ -49,7 +47,9 @@ export class AuthController {
 
   @Post("logout")
   @HttpCode(204)
-  async logout(@Headers("authorization") authorization?: string) {
+  async logout(
+    @Headers("authorization") authorization?: string
+  ): Promise<void> {
     const token = this.extractToken(authorization);
 
     if (!token) {

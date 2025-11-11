@@ -1,10 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+import { type AuthResponse } from "@amplify/types";
+
 import {
   AUTH_API_BASE_URL,
   DEFAULT_AUTH_REDIRECT,
   SESSION_COOKIE_NAME,
-  type AuthResponse,
 } from "@/lib/auth";
 
 const PUBLIC_PATHS = ["/auth", "/unauthorized"];

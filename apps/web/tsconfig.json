@@ -2,7 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@amplify/types": ["../../packages/types/dist/index"],
+      "@amplify/types/*": ["../../packages/types/dist/*"]
     }
   },
   "include": [
