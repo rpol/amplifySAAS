@@ -50,7 +50,7 @@ export const sidebarItems: NavGroup[] = [
     items: [
       {
         title: "Inicio",
-        url: "/dashboard/default",
+        url: "/amplify/default",
         icon: LayoutDashboard,
       },
       {
@@ -157,12 +157,12 @@ export const sidebarItems: NavGroup[] = [
       },
       // {
       //   title: "CRM",
-      //   url: "/dashboard/crm",
+      //   url: "/amplify/crm",
       //   icon: ChartBar,
       // },
       // {
       //   title: "Finance",
-      //   url: "/dashboard/finance",
+      //   url: "/amplify/finance",
       //   icon: Banknote,
       // },
     ],
@@ -173,31 +173,31 @@ export const sidebarItems: NavGroup[] = [
     items: [
       {
         title: "Empresa",
-        url: "/dashboard/coming-soon",
+        url: "/amplify/coming-soon",
         icon: Mail,
         comingSoon: false,
       },
       {
         title: "Organizaciones",
-        url: "/dashboard/coming-soon",
+        url: "/amplify/mngmt/organization",
         icon: MessageSquare,
         comingSoon: false,
       },
       {
-        title: "Usuaios y Roles",
-        url: "/dashboard/coming-soon",
+        title: "Usuarios y Roles",
+        url: "/amplify/mngmt/user",
         icon: MessageSquare,
         comingSoon: false,
       },
       {
         title: "Preferencias Contables",
-        url: "/dashboard/coming-soon",
+        url: "/amplify/coming-soon",
         icon: Calendar,
         comingSoon: false,
       },
       {
         title: "Impuestos",
-        url: "/dashboard/coming-soon",
+        url: "/amplify/coming-soon",
         icon: Kanban,
         comingSoon: false,
       },
@@ -220,7 +220,7 @@ export const sidebarItems: NavGroup[] = [
   //   items: [
   //     {
   //       title: "Others",
-  //       url: "/dashboard/coming-soon",
+  //       url: "/amplify/coming-soon",
   //       icon: SquareArrowUpRight,
   //       comingSoon: true,
   //     },

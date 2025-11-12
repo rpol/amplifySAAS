@@ -1,6 +1,6 @@
 export const SESSION_COOKIE_NAME = "amplify_session";
 
-export const DEFAULT_AUTH_REDIRECT = "/dashboard/default";
+export const DEFAULT_AUTH_REDIRECT = "/amplify/default";
 
 export const AUTH_API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ??
@@ -11,7 +11,7 @@ export type { AuthResponse } from "@amplify/types";
 
 export function calculateCookieMaxAge(
   expiresAt: string,
-  fallbackSeconds = 60 * 60 * 24 * 7,
+  fallbackSeconds = 60 * 60 * 24 * 7
 ): number {
   // Ensure cookie expiration stays in sync with server session expiry.
   const expiresAtDate = new Date(expiresAt);

@@ -1,4 +1,9 @@
 {
   "/(external)/page": "app/(external)/page.js",
-  "/(main)/dashboard/default/page": "app/(main)/dashboard/default/page.js"
+  "/(main)/amplify/[...not-found]/page": "app/(main)/amplify/[...not-found]/page.js",
+  "/(main)/amplify/default/page": "app/(main)/amplify/default/page.js",
+  "/(main)/amplify/mngmt/organization/page": "app/(main)/amplify/mngmt/organization/page.js",
+  "/(main)/amplify/mngmt/user/page": "app/(main)/amplify/mngmt/user/page.js",
+  "/(main)/amplify/mngmt/users/page": "app/(main)/amplify/mngmt/users/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

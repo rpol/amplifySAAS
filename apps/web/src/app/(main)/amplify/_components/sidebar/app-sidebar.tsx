@@ -32,7 +32,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <Link href="/dashboard/default">
+              <Link href="/amplify/default">
                 <Command />
                 <span className="text-base font-semibold">
                   {APP_CONFIG.name}

@@ -8,8 +8,38 @@
           "exportedName": "getValueFromCookie",
           "filename": "apps/web/src/server/server-actions.ts"
         },
-        "app/(main)/dashboard/default/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/(main)/amplify/[...not-found]/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/[...not-found]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getValueFromCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/default/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getValueFromCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/organization/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/organization/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getValueFromCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/user/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/user/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getValueFromCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/users/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/users/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getValueFromCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "getValueFromCookie",
           "filename": "apps/web/src/server/server-actions.ts"
@@ -17,7 +47,12 @@
       },
       "layer": {
         "app/(external)/page": "rsc",
-        "app/(main)/dashboard/default/page": "rsc"
+        "app/(main)/amplify/[...not-found]/page": "rsc",
+        "app/(main)/amplify/default/page": "rsc",
+        "app/(main)/amplify/mngmt/organization/page": "rsc",
+        "app/(main)/amplify/mngmt/user/page": "rsc",
+        "app/(main)/amplify/mngmt/users/page": "rsc",
+        "app/_not-found/page": "rsc"
       },
       "filename": "apps/web/src/server/server-actions.ts",
       "exportedName": "getValueFromCookie"
@@ -30,8 +65,38 @@
           "exportedName": "setValueToCookie",
           "filename": "apps/web/src/server/server-actions.ts"
         },
-        "app/(main)/dashboard/default/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/(main)/amplify/[...not-found]/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/[...not-found]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setValueToCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/default/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setValueToCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/organization/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/organization/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setValueToCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/user/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/user/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setValueToCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/users/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/users/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "setValueToCookie",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "setValueToCookie",
           "filename": "apps/web/src/server/server-actions.ts"
@@ -39,7 +104,12 @@
       },
       "layer": {
         "app/(external)/page": "rsc",
-        "app/(main)/dashboard/default/page": "action-browser"
+        "app/(main)/amplify/[...not-found]/page": "action-browser",
+        "app/(main)/amplify/default/page": "action-browser",
+        "app/(main)/amplify/mngmt/organization/page": "action-browser",
+        "app/(main)/amplify/mngmt/user/page": "action-browser",
+        "app/(main)/amplify/mngmt/users/page": "action-browser",
+        "app/_not-found/page": "rsc"
       },
       "filename": "apps/web/src/server/server-actions.ts",
       "exportedName": "setValueToCookie"
@@ -52,8 +122,38 @@
           "exportedName": "getPreference",
           "filename": "apps/web/src/server/server-actions.ts"
         },
-        "app/(main)/dashboard/default/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/(main)/amplify/[...not-found]/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/[...not-found]/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getPreference",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/default/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/default/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getPreference",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/organization/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/organization/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getPreference",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/user/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/user/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getPreference",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/(main)/amplify/mngmt/users/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/amplify/mngmt/users/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getPreference",
+          "filename": "apps/web/src/server/server-actions.ts"
+        },
+        "app/_not-found/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "getPreference",
           "filename": "apps/web/src/server/server-actions.ts"
@@ -61,7 +161,12 @@
       },
       "layer": {
         "app/(external)/page": "rsc",
-        "app/(main)/dashboard/default/page": "rsc"
+        "app/(main)/amplify/[...not-found]/page": "rsc",
+        "app/(main)/amplify/default/page": "rsc",
+        "app/(main)/amplify/mngmt/organization/page": "rsc",
+        "app/(main)/amplify/mngmt/user/page": "rsc",
+        "app/(main)/amplify/mngmt/users/page": "rsc",
+        "app/_not-found/page": "rsc"
       },
       "filename": "apps/web/src/server/server-actions.ts",
       "exportedName": "getPreference"

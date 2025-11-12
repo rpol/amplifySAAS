@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect("/dashboard/default");
+  redirect("/amplify/default");
   return <>Coming Soon</>;
 }
