@@ -76,12 +76,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$package$2e$js
 ;
 const currentYear = new Date().getFullYear();
 const APP_CONFIG = {
-    name: "Studio Admin",
+    name: "Amplify Accounting",
     version: __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$package$2e$json__$28$json$29$__["default"].version,
-    copyright: `© ${currentYear}, Studio Admin.`,
+    copyright: `© ${currentYear}, Amplify Accounting.`,
     meta: {
-        title: "Studio Admin - Modern Next.js Dashboard Starter Template",
-        description: "Studio Admin is a modern, open-source dashboard starter template built with Next.js 16, Tailwind CSS v4, and shadcn/ui. Perfect for SaaS apps, admin panels, and internal tools—fully customizable and production-ready."
+        title: "Amplify Accounting - Modern Accounting Solution",
+        description: "Amplify Accounting is a modern, cloud-based accounting solution designed to streamline your financial management processes."
     }
 };
 }),

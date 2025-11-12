@@ -1,3 +1,68 @@
-[00:00:00.389] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.449] Server  LOG      ✓ Ready in 337ms
-[00:00:14.472] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.442] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.503] Server  LOG      ✓ Ready in 372ms
+[00:00:47.564] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:31.965] Server  LOG      ✓ Compiled in 49ms
+[00:07:07.928] Server  LOG      ✓ Compiled in 35ms
+[00:08:04.334] Server  LOG      ✓ Compiled in 33ms
+[00:08:09.798] Server  LOG      ✓ Compiled in 29ms
+[00:09:04.814] Server  LOG      ✓ Compiled in 35ms
+[00:11:38.563] Server  LOG      ✓ Compiled in 33ms
+[00:22:07.460] Server  LOG      ✓ Compiled in 37ms
+[00:22:39.697] Server  LOG      ✓ Compiled in 29ms
+[00:25:23.326] Server  LOG      ✓ Compiled in 37ms
+[00:27:11.243] Server  LOG      ✓ Compiled in 27ms
+[00:27:33.196] Server  LOG      ✓ Compiled in 36ms
+[00:28:43.091] Server  LOG      ✓ Compiled in 29ms
+[00:29:11.755] Server  LOG      ✓ Compiled in 32ms
+[00:30:55.642] Server  LOG      ✓ Compiled in 28ms
+[00:34:43.084] Server  LOG      ✓ Compiled in 30ms
+[00:36:01.808] Server  LOG      ✓ Compiled in 34ms
+[00:37:04.978] Server  LOG      ✓ Compiled in 38ms
+[00:37:48.965] Server  LOG      ✓ Compiled in 28ms
+[00:45:24.288] Server  LOG      ✓ Compiled in 115ms
+[00:45:25.834] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:19.845] Server  LOG      ✓ Compiled in 99ms
+[00:50:20.435] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:08.015] Server  LOG      ✓ Compiled in 188ms
+[00:51:09.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:34.091] Server  LOG      ✓ Compiled in 124ms
+[00:52:34.629] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:08.560] Server  LOG      ✓ Compiled in 163ms
+[00:54:09.026] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:47.697] Server  LOG      ✓ Compiled in 26ms
+[00:59:39.094] Server  LOG      ✓ Compiled in 32ms
+[01:00:27.786] Server  LOG      ✓ Compiled in 27ms
+[01:02:10.315] Server  LOG      ✓ Compiled in 35ms
+[01:04:20.797] Server  LOG      ✓ Compiled in 29ms
+[01:04:20.900] Browser ERROR   ./apps/web/src/app/(main)/dashboard/_components/sidebar/nav-main.tsx:201:35
+Parsing ecmascript source code failed
+  199 |                 <PlusCircleIcon />
+  200 |                 <span>Quick Create</span>
+> 201 |               </SidebarMenuButton>
+      |                                   ^
+> 202 |               <Button
+      | ^^^^^^^^^^^^^^^
+  203 |                 size="icon"
+  204 |                 className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"
+  205 |                 variant="outline"
+
+Expected '</', got 'jsx text (
+              )'
+
+Import traces:
+  Client Component Browser:
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/nav-main.tsx [Client Component Browser]
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/app-sidebar.tsx [Client Component Browser]
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/app-sidebar.tsx [Server Component]
+    ./apps/web/src/app/(main)/dashboard/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/nav-main.tsx [Client Component SSR]
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/app-sidebar.tsx [Client Component SSR]
+    ./apps/web/src/app/(main)/dashboard/_components/sidebar/app-sidebar.tsx [Server Component]
+    ./apps/web/src/app/(main)/dashboard/layout.tsx [Server Component]
+[01:04:39.878] Server  LOG      ✓ Compiled in 157ms
+[01:04:41.574] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:55.022] Server  LOG      ✓ Compiled in 153ms
+[01:08:11.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:10:07.954] Server  LOG      ✓ Compiled in 30ms
