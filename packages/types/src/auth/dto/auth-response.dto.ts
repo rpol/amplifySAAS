@@ -2,6 +2,10 @@ export interface AuthUserSummary {
   id: string;
   email: string;
   name: string;
+  role: string;
+  banned: boolean;
+  banReason?: string | null;
+  banExpires?: string | null;
 }
 
 export interface AuthResponse {
@@ -9,4 +13,5 @@ export interface AuthResponse {
   expiresAt: string;
   maxAge: number;
   user: AuthUserSummary;
+  impersonatedBy?: string | null;
 }

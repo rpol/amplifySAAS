@@ -2,18 +2,6 @@
   "node": {
     "4056b3dfaa9f1c35fb2c2c70ef6e8e3d08dfffe293": {
       "workers": {
-        "app/(external)/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(external)/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getValueFromCookie",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
-        "app/(main)/auth/v2/login/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getValueFromCookie",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
         "app/(main)/dashboard/crm/page": {
           "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/crm/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -34,8 +22,6 @@
         }
       },
       "layer": {
-        "app/(external)/page": "rsc",
-        "app/(main)/auth/v2/login/page": "rsc",
         "app/(main)/dashboard/crm/page": "rsc",
         "app/(main)/dashboard/default/page": "rsc",
         "app/(main)/dashboard/finance/page": "rsc"
@@ -45,18 +31,6 @@
     },
     "703b8021d3e1eaea8282604251e7e6e5296de89ec6": {
       "workers": {
-        "app/(external)/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(external)/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "setValueToCookie",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
-        "app/(main)/auth/v2/login/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "setValueToCookie",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
         "app/(main)/dashboard/crm/page": {
           "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/crm/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -77,8 +51,6 @@
         }
       },
       "layer": {
-        "app/(external)/page": "rsc",
-        "app/(main)/auth/v2/login/page": "action-browser",
         "app/(main)/dashboard/crm/page": "action-browser",
         "app/(main)/dashboard/default/page": "action-browser",
         "app/(main)/dashboard/finance/page": "action-browser"
@@ -88,18 +60,6 @@
     },
     "70eedd92e71e822030f3329271069646347c1354d8": {
       "workers": {
-        "app/(external)/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(external)/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getPreference",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
-        "app/(main)/auth/v2/login/page": {
-          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "getPreference",
-          "filename": "apps/web/src/server/server-actions.ts"
-        },
         "app/(main)/dashboard/crm/page": {
           "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/dashboard/crm/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -120,8 +80,6 @@
         }
       },
       "layer": {
-        "app/(external)/page": "rsc",
-        "app/(main)/auth/v2/login/page": "rsc",
         "app/(main)/dashboard/crm/page": "rsc",
         "app/(main)/dashboard/default/page": "rsc",
         "app/(main)/dashboard/finance/page": "rsc"

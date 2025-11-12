@@ -148,7 +148,7 @@ export class AuthService {
       },
     });
 
-    return { token, expiresAt };
+    return { token, expiresAt, impersonatedBy: null };
   }
 
   private async removeExpiredSessions(tx: PrismaClientLike, userId: string) {
@@ -166,7 +166,11 @@ export class AuthService {
 
   private toAuthResponse(
     user: User,
-    session: { token: string; expiresAt: Date },
+    session: {
+      token: string;
+      expiresAt: Date;
+      impersonatedBy?: string | null;
+    },
   ): AuthResponse {
     const maxAge = Math.max(
       0,
@@ -176,6 +180,10 @@ export class AuthService {
       id: user.id,
       email: user.email,
       name: user.name,
+      role: user.role,
+      banned: user.banned,
+      banReason: user.banReason,
+      banExpires: user.banExpires?.toISOString() ?? null,
     };
 
     return {
@@ -183,6 +191,7 @@ export class AuthService {
       expiresAt: session.expiresAt.toISOString(),
       maxAge,
       user: userSummary,
+      impersonatedBy: session.impersonatedBy ?? null,
     };
   }
 }

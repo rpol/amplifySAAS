@@ -14,8 +14,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "@amplify/types": ["../../packages/types/dist/index"],
-      "@amplify/types/*": ["../../packages/types/dist/*"]
+      "@amplify/types": ["../../packages/types/src/index"],
+      "@amplify/types/*": ["../../packages/types/src/*"]
     },
     "incremental": true,
     "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",

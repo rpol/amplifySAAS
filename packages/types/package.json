@@ -15,6 +15,14 @@
     "./auth/dto": {
       "types": "./dist/auth/dto/index.d.ts",
       "default": "./dist/auth/dto/index.js"
+    },
+    "./organization": {
+      "types": "./dist/organization/index.d.ts",
+      "default": "./dist/organization/index.js"
+    },
+    "./admin": {
+      "types": "./dist/admin/index.d.ts",
+      "default": "./dist/admin/index.js"
     }
   },
   "scripts": {

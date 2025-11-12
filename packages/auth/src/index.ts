@@ -1,7 +1,7 @@
 import { betterAuth } from "better-auth";
 import { prisma } from "@amplify/db";
 import { prismaAdapter } from "better-auth/adapters/prisma";
-import { organization } from "better-auth/plugins";
+import { admin, organization } from "better-auth/plugins";
 
 const runtimeEnv =
   (
@@ -19,7 +19,7 @@ export const auth = betterAuth({
     provider: "postgresql",
     debugLogs: debugAdapterLogs,
   }),
-  plugins: [organization()],
+  plugins: [organization(), admin()],
 });
 
 export type AuthInstance = typeof auth;
