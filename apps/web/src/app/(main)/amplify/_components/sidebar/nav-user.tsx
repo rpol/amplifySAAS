@@ -6,11 +6,11 @@ import { useRouter } from "next/navigation";
 
 import { type AuthUserSummary } from "@amplify/types";
 import {
-  EllipsisVertical,
   CircleUser,
   CreditCard,
-  MessageSquareDot,
+  EllipsisVertical,
   LogOut,
+  MessageSquareDot,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -30,8 +30,9 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { authClient } from "@/lib/auth-client";
+import { ensureClientResponse } from "@/lib/auth-client-helpers";
 import { getInitials } from "@/lib/utils";
-import { logout } from "@/server/server-actions";
 
 export function NavUser({
   user,
@@ -47,16 +48,25 @@ export function NavUser({
 
   const handleLogout = useCallback(() => {
     startTransition(async () => {
-      const result = await logout();
+      try {
+        const result = ensureClientResponse<unknown>(
+          await authClient.signOut(),
+        );
 
-      if (!result.success) {
-        toast.error(result.error);
-        return;
+        if (result.error) {
+          throw new Error(result.error.message ?? "Failed to log out.");
+        }
+
+        toast.success("Logged out successfully.");
+        router.replace("/auth/v2/login");
+        router.refresh();
+      } catch (error) {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Failed to log out. Please try again.";
+        toast.error(message);
       }
-
-      toast.success("Logged out successfully.");
-      router.replace("/auth/v2/login");
-      router.refresh();
     });
   }, [router]);
 

@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { type AuthResponse } from "@amplify/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -20,13 +19,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  AUTH_API_BASE_URL,
-  SESSION_COOKIE_NAME,
-  calculateCookieMaxAge,
-  resolveRedirectPath,
-} from "@/lib/auth";
-import { setValueToCookie } from "@/server/server-actions";
+import { resolveRedirectPath } from "@/lib/auth";
+import { authClient } from "@/lib/auth-client";
+import { ensureClientResponse } from "@/lib/auth-client-helpers";
 
 const FormSchema = z
   .object({
@@ -59,34 +54,34 @@ export function RegisterForm() {
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`${AUTH_API_BASE_URL}/auth/register`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      const nameFromEmail = data.email.split("@")[0]?.trim() || data.email;
+      const result = ensureClientResponse<{
+        user: unknown;
+        token: string;
+      }>(
+        await authClient.signUp.email({
           email: data.email,
           password: data.password,
+          name: nameFromEmail,
         }),
-      });
+      );
 
-      const payload = (await response.json()) as Partial<AuthResponse> & {
-        message?: string;
-      };
-
-      if (!response.ok || !payload?.token || !payload.expiresAt) {
+      if (result.error) {
         const message =
-          payload?.message ?? "Registration failed. Please try again.";
+          result.error.message ?? "Registration failed. Please try again.";
         toast.error(message);
         return;
       }
 
-      const maxAge = calculateCookieMaxAge(payload.expiresAt, payload.maxAge);
-      await setValueToCookie(SESSION_COOKIE_NAME, payload.token, {
-        maxAge,
-      });
+      if (!result.data) {
+        toast.error("Registration failed. Please try again.");
+        return;
+      }
 
       toast.success("Account created successfully");
       const destination = resolveRedirectPath(searchParams.get("redirect"));
       router.push(destination);
+      router.refresh();
     } catch (error) {
       const message =
         error instanceof Error

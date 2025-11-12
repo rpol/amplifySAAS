@@ -1,4 +1,6 @@
 {
+  "/(external)/page": "app/(external)/page.js",
   "/(main)/amplify/default/page": "app/(main)/amplify/default/page.js",
-  "/(main)/auth/v2/login/page": "app/(main)/auth/v2/login/page.js"
+  "/(main)/amplify/mngmt/organization/page": "app/(main)/amplify/mngmt/organization/page.js",
+  "/api/auth/[...betterAuth]/route": "app/api/auth/[...betterAuth]/route.js"
 }

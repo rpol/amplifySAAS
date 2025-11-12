@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { type AuthResponse } from "@amplify/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -21,13 +20,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  AUTH_API_BASE_URL,
-  SESSION_COOKIE_NAME,
-  calculateCookieMaxAge,
-  resolveRedirectPath,
-} from "@/lib/auth";
-import { setValueToCookie } from "@/server/server-actions";
+import { resolveRedirectPath } from "@/lib/auth";
+import { authClient } from "@/lib/auth-client";
+import { ensureClientResponse } from "@/lib/auth-client-helpers";
 
 const FormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -53,34 +48,32 @@ export function LoginForm() {
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`${AUTH_API_BASE_URL}/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      const result = ensureClientResponse<{
+        user: unknown;
+        token: string;
+      }>(
+        await authClient.signIn.email({
           email: data.email,
           password: data.password,
-          remember: Boolean(data.remember),
+          rememberMe: Boolean(data.remember),
         }),
-      });
+      );
 
-      const payload = (await response.json()) as Partial<AuthResponse> & {
-        message?: string;
-      };
-
-      if (!response.ok || !payload?.token || !payload.expiresAt) {
-        const message = payload?.message ?? "Invalid email or password.";
+      if (result.error) {
+        const message = result.error.message ?? "Invalid email or password.";
         toast.error(message);
         return;
       }
 
-      const maxAge = calculateCookieMaxAge(payload.expiresAt, payload.maxAge);
-      await setValueToCookie(SESSION_COOKIE_NAME, payload.token, {
-        maxAge,
-      });
+      if (!result.data) {
+        toast.error("Invalid email or password.");
+        return;
+      }
 
       toast.success("Welcome back!");
       const destination = resolveRedirectPath(searchParams.get("redirect"));
       router.push(destination);
+      router.refresh();
     } catch (error) {
       const message =
         error instanceof Error

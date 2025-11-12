@@ -12,13 +12,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
+import { authClient } from "@/lib/auth-client";
+import { ensureClientResponse } from "@/lib/auth-client-helpers";
 import { cn, getInitials } from "@/lib/utils";
-import { logout } from "@/server/server-actions";
 
 export function AccountSwitcher({
   currentUser,
@@ -91,16 +92,25 @@ export function AccountSwitcher({
 
   const handleLogout = () => {
     startTransition(async () => {
-      const result = await logout();
+      try {
+        const result = ensureClientResponse<unknown>(
+          await authClient.signOut(),
+        );
 
-      if (!result.success) {
-        toast.error(result.error);
-        return;
+        if (result.error) {
+          throw new Error(result.error.message ?? "Failed to log out.");
+        }
+
+        toast.success("Logged out successfully.");
+        router.replace("/auth/v2/login");
+        router.refresh();
+      } catch (error) {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Failed to log out. Please try again.";
+        toast.error(message);
       }
-
-      toast.success("Logged out successfully.");
-      router.replace("/auth/v2/login");
-      router.refresh();
     });
   };
 

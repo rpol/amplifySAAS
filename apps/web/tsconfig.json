@@ -3,6 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
+      "@amplify/auth": ["../../packages/auth/src"],
       "@amplify/types": ["../../packages/types/dist/index"],
       "@amplify/types/*": ["../../packages/types/dist/*"]
     }

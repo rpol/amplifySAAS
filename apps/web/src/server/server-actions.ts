@@ -2,9 +2,8 @@
 
 import { cookies } from "next/headers";
 
+import { auth } from "@amplify/auth";
 import { type AuthResponse } from "@amplify/types";
-
-import { AUTH_API_BASE_URL, SESSION_COOKIE_NAME } from "@/lib/auth";
 
 export async function getValueFromCookie(
   key: string,
@@ -50,70 +49,104 @@ export async function getPreference<T extends string>(
 
 export async function getCurrentSession(): Promise<AuthResponse | null> {
   const cookieStore = await cookies();
-  const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+  const cookieHeader = stringifyCookies(cookieStore.getAll());
 
-  if (!token) {
+  if (!cookieHeader) {
     return null;
   }
 
+  const session = await requestSession(cookieHeader);
+
+  if (!session) {
+    return null;
+  }
+
+  return buildAuthResponse(session);
+}
+
+type BetterAuthSession = {
+  session: {
+    token: string;
+    expiresAt: string | Date;
+  } & Record<string, unknown>;
+  user: {
+    id: string;
+    email: string;
+    name?: string | null;
+  } & Record<string, unknown>;
+} | null;
+
+function stringifyCookies(
+  allCookies: Array<{ name: string; value: string }>,
+): string | null {
+  if (allCookies.length === 0) {
+    return null;
+  }
+
+  return allCookies.map(({ name, value }) => `${name}=${value}`).join("; ");
+}
+
+async function requestSession(
+  cookieHeader: string,
+): Promise<BetterAuthSession> {
   try {
-    const response = await fetch(`${AUTH_API_BASE_URL}/auth/session`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      cache: "no-store",
-    });
+    const headers = new Headers();
+    headers.set("cookie", cookieHeader);
 
-    if (!response.ok) {
-      if (response.status === 401) {
-        cookieStore.delete(SESSION_COOKIE_NAME);
-      }
-      return null;
-    }
-
-    return (await response.json()) as AuthResponse;
+    return (await auth.api.getSession({
+      headers,
+      asResponse: false,
+    })) as BetterAuthSession;
   } catch (error) {
     console.error("Failed to fetch current session", error);
     return null;
   }
 }
 
-export async function logout(): Promise<
-  { success: true } | { success: false; error: string }
-> {
-  const cookieStore = await cookies();
-  const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+function buildAuthResponse(
+  session: NonNullable<BetterAuthSession>,
+): AuthResponse {
+  const expiresAtIso = normalizeExpiration(session.session.expiresAt);
+  const maxAge = calculateMaxAgeSeconds(expiresAtIso);
+  const userRecord = session.user as Record<string, unknown>;
+  const sessionRecord = session.session as Record<string, unknown>;
 
-  if (!token) {
-    cookieStore.delete(SESSION_COOKIE_NAME);
-    return { success: true };
+  return {
+    token: session.session.token,
+    expiresAt: expiresAtIso,
+    maxAge,
+    user: {
+      id: session.user.id,
+      email: session.user.email,
+      name: session.user.name ?? session.user.email,
+      role: typeof userRecord.role === "string" ? userRecord.role : "user",
+      banned:
+        typeof userRecord.banned === "boolean" ? userRecord.banned : false,
+      banReason:
+        typeof userRecord.banReason === "string" ? userRecord.banReason : null,
+      banExpires: normalizeBanExpires(userRecord.banExpires),
+    },
+    impersonatedBy:
+      typeof sessionRecord.impersonatedBy === "string"
+        ? sessionRecord.impersonatedBy
+        : null,
+  };
+}
+
+function normalizeExpiration(value: string | Date): string {
+  const base = typeof value === "string" ? value : value.toISOString();
+  return new Date(base).toISOString();
+}
+
+function calculateMaxAgeSeconds(expiresAtIso: string): number {
+  const diffMs = new Date(expiresAtIso).getTime() - Date.now();
+  return Math.max(0, Math.floor(diffMs / 1000));
+}
+
+function normalizeBanExpires(value: unknown): string | null {
+  if (value instanceof Date) {
+    return value.toISOString();
   }
 
-  try {
-    const response = await fetch(`${AUTH_API_BASE_URL}/auth/logout`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    if (!response.ok && response.status !== 401) {
-      return {
-        success: false,
-        error: "Failed to log out. Please try again.",
-      };
-    }
-  } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Unexpected logout failure.";
-    return {
-      success: false,
-      error: message,
-    };
-  } finally {
-    cookieStore.delete(SESSION_COOKIE_NAME);
-  }
-
-  return { success: true };
+  return typeof value === "string" ? value : null;
 }

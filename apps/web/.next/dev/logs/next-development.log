@@ -1,10 +1,668 @@
-[00:00:00.438] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.497] Server  LOG      ✓ Ready in 379ms
-[00:00:07.250] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:15.367] Server  LOG      ✓ Compiled in 310ms
-[00:02:18.556] Server  LOG      ✓ Compiled in 48ms
-[00:02:25.670] Server  LOG      ✓ Compiled in 136ms
-[00:02:48.127] Server  LOG      ✓ Compiled in 93ms
-[00:02:59.881] Server  LOG      ✓ Compiled in 102ms
-[00:03:07.501] Server  LOG      ✓ Compiled in 63ms
-[00:04:48.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.573] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.657] Server  LOG      ✓ Ready in 506ms
+[00:00:11.392] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:11.392] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:12.112] Server  LOG     2025-11-12T12:33:26.323Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:13.404] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:13.407] Server  LOG     2025-11-12T12:33:27.618Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:13.409] Server  LOG     2025-11-12T12:33:27.620Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:13.409] Server  LOG     2025-11-12T12:33:27.621Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:13.575] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:13.575] Server  LOG     2025-11-12T12:33:27.787Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:13.576] Server  LOG     2025-11-12T12:33:27.788Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:15.186] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:15.186] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:15.510] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:15.510] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:15.527] Server  LOG     2025-11-12T12:33:29.739Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:15.582] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:15.582] Server  LOG     2025-11-12T12:33:29.794Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:15.582] Server  LOG     2025-11-12T12:33:29.794Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:15.583] Server  LOG     2025-11-12T12:33:29.795Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:15.679] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:15.679] Server  LOG     2025-11-12T12:33:29.891Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:15.679] Server  LOG     2025-11-12T12:33:29.891Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:17.593] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:17.593] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:17.732] Server  LOG     2025-11-12T12:33:31.943Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:17.822] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:17.822] Server  LOG     2025-11-12T12:33:32.034Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:17.823] Server  LOG     2025-11-12T12:33:32.035Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#0\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:17.823] Server  LOG     2025-11-12T12:33:32.035Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:17.876] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:17.877] Server  LOG     2025-11-12T12:33:32.088Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:17.877] Server  LOG     2025-11-12T12:33:32.089Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#1\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:18.201] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.505] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:18.505] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:18.523] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:18.523] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:18.527] Server  LOG     2025-11-12T12:33:32.738Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#4\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:18.528] Server  LOG     2025-11-12T12:33:32.739Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#5\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:18.582] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:18.582] Server  LOG     2025-11-12T12:33:32.794Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#4\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:18.583] Server  LOG     2025-11-12T12:33:32.795Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#4\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:18.583] Server  LOG     2025-11-12T12:33:32.795Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#6\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:18.637] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:18.638] Server  LOG     2025-11-12T12:33:32.849Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#6\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:18.638] Server  LOG     2025-11-12T12:33:32.850Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#6\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:18.639] Server  LOG     2025-11-12T12:33:32.851Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#7\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:18.818] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:18.818] Server  LOG     2025-11-12T12:33:33.030Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#7\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:18.819] Server  LOG     2025-11-12T12:33:33.031Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#7\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:18.819] Server  LOG     2025-11-12T12:33:33.031Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#8\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:18.934] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:18.934] Server  LOG     2025-11-12T12:33:33.146Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#8\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:18.934] Server  LOG     2025-11-12T12:33:33.146Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#8\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.036] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:19.037] Server  LOG     2025-11-12T12:33:33.249Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#5\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.037] Server  LOG     2025-11-12T12:33:33.249Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#5\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.037] Server  LOG     2025-11-12T12:33:33.249Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#9\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:19.143] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:19.144] Server  LOG     2025-11-12T12:33:33.355Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#9\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.144] Server  LOG     2025-11-12T12:33:33.356Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#9\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.145] Server  LOG     2025-11-12T12:33:33.357Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#10\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:19.254] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:19.255] Server  LOG     2025-11-12T12:33:33.466Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#10\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.255] Server  LOG     2025-11-12T12:33:33.467Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#10\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.255] Server  LOG     2025-11-12T12:33:33.467Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#11\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:19.256] Server  LOG     2025-11-12T12:33:33.467Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#12\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:19.406] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"organizationId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:19.406] Server  LOG     2025-11-12T12:33:33.618Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#12\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.406] Server  LOG     2025-11-12T12:33:33.618Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#12\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.413] Server  LOG     prisma:query "SELECT \"public\".\"Invitation\".\"id\", \"public\".\"Invitation\".\"organizationId\", \"public\".\"Invitation\".\"email\", \"public\".\"Invitation\".\"role\", \"public\".\"Invitation\".\"status\"::text, \"public\".\"Invitation\".\"teamId\", \"public\".\"Invitation\".\"inviterId\", \"public\".\"Invitation\".\"expiresAt\", \"public\".\"Invitation\".\"createdAt\", \"public\".\"Invitation\".\"updatedAt\" FROM \"public\".\"Invitation\" WHERE \"public\".\"Invitation\".\"organizationId\" = $1 ORDER BY \"public\".\"Invitation\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:19.414] Server  LOG     2025-11-12T12:33:33.625Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#11\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.414] Server  LOG     2025-11-12T12:33:33.626Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#11\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.414] Server  LOG     2025-11-12T12:33:33.626Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#13\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:19.521] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) ORDER BY \"public\".\"User\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:19.521] Server  LOG     2025-11-12T12:33:33.733Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#13\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.522] Server  LOG     2025-11-12T12:33:33.734Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#13\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:19.522] Server  LOG     2025-11-12T12:33:33.734Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#14\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:19.629] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE (\"public\".\"Member\".\"userId\" = $1 AND \"public\".\"Member\".\"organizationId\" = $2) LIMIT $3 OFFSET $4"
+[00:00:19.629] Server  LOG     2025-11-12T12:33:33.841Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#14\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:19.630] Server  LOG     2025-11-12T12:33:33.842Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#14\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.405] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:30.406] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:30.429] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:30.429] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:30.433] Server  LOG     2025-11-12T12:33:44.644Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#15\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:30.433] Server  LOG     2025-11-12T12:33:44.645Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#16\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:30.491] Server  LOG     prisma:query "SELECT 1"
+[00:00:30.491] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:30.491] Server  LOG     2025-11-12T12:33:44.703Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#15\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.492] Server  LOG     2025-11-12T12:33:44.703Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#15\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.492] Server  LOG     2025-11-12T12:33:44.704Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#17\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:30.544] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:30.544] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:30.545] Server  LOG     2025-11-12T12:33:44.757Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#16\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.545] Server  LOG     2025-11-12T12:33:44.757Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#16\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.545] Server  LOG     2025-11-12T12:33:44.757Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#18\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:30.546] Server  LOG     2025-11-12T12:33:44.758Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#17\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.546] Server  LOG     2025-11-12T12:33:44.758Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#17\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.547] Server  LOG     2025-11-12T12:33:44.759Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#19\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:30.601] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:30.601] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:30.602] Server  LOG     2025-11-12T12:33:44.813Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#18\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.602] Server  LOG     2025-11-12T12:33:44.814Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#18\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.602] Server  LOG     2025-11-12T12:33:44.814Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#20\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:30.603] Server  LOG     2025-11-12T12:33:44.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#19\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.603] Server  LOG     2025-11-12T12:33:44.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#19\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.603] Server  LOG     2025-11-12T12:33:44.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#21\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:30.603] Server  LOG     2025-11-12T12:33:44.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#22\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:30.657] Server  LOG     prisma:query "SELECT \"public\".\"Invitation\".\"id\", \"public\".\"Invitation\".\"organizationId\", \"public\".\"Invitation\".\"email\", \"public\".\"Invitation\".\"role\", \"public\".\"Invitation\".\"status\"::text, \"public\".\"Invitation\".\"teamId\", \"public\".\"Invitation\".\"inviterId\", \"public\".\"Invitation\".\"expiresAt\", \"public\".\"Invitation\".\"createdAt\", \"public\".\"Invitation\".\"updatedAt\" FROM \"public\".\"Invitation\" WHERE \"public\".\"Invitation\".\"organizationId\" = $1 ORDER BY \"public\".\"Invitation\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:30.657] Server  LOG     2025-11-12T12:33:44.869Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#21\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.658] Server  LOG     2025-11-12T12:33:44.870Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#21\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.658] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:30.658] Server  LOG     2025-11-12T12:33:44.870Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#20\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.658] Server  LOG     2025-11-12T12:33:44.870Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#20\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:30.659] Server  LOG     2025-11-12T12:33:44.871Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#23\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:30.713] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:30.714] Server  LOG     2025-11-12T12:33:44.926Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#23\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:30.714] Server  LOG     2025-11-12T12:33:44.926Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#23\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:31.111] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"organizationId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:31.111] Server  LOG     2025-11-12T12:33:45.323Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#22\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:31.112] Server  LOG     2025-11-12T12:33:45.324Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#22\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:31.112] Server  LOG     2025-11-12T12:33:45.324Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#24\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:31.222] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) ORDER BY \"public\".\"User\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:31.223] Server  LOG     2025-11-12T12:33:45.434Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#24\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:31.225] Server  LOG     2025-11-12T12:33:45.436Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#24\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:31.225] Server  LOG     2025-11-12T12:33:45.437Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#25\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:31.407] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE (\"public\".\"Member\".\"userId\" = $1 AND \"public\".\"Member\".\"organizationId\" = $2) LIMIT $3 OFFSET $4"
+[00:00:31.408] Server  LOG     2025-11-12T12:33:45.619Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#25\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:31.408] Server  LOG     2025-11-12T12:33:45.620Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#25\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.317] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:34.317] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:34.336] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:34.336] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:34.340] Server  LOG     2025-11-12T12:33:48.552Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#26\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.341] Server  LOG     2025-11-12T12:33:48.553Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#27\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.395] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:34.395] Server  LOG     2025-11-12T12:33:48.607Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#27\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.396] Server  LOG     2025-11-12T12:33:48.607Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#27\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.396] Server  LOG     2025-11-12T12:33:48.608Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#28\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.451] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:34.451] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:34.451] Server  LOG     2025-11-12T12:33:48.663Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#28\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.451] Server  LOG     2025-11-12T12:33:48.663Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#28\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.452] Server  LOG     2025-11-12T12:33:48.664Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#29\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.452] Server  LOG     2025-11-12T12:33:48.664Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#26\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.452] Server  LOG     2025-11-12T12:33:48.664Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#26\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.452] Server  LOG     2025-11-12T12:33:48.664Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#30\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.602] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:34.602] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:34.602] Server  LOG     2025-11-12T12:33:48.814Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#29\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.603] Server  LOG     2025-11-12T12:33:48.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#29\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.603] Server  LOG     2025-11-12T12:33:48.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#31\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:34.603] Server  LOG     2025-11-12T12:33:48.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#32\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:34.603] Server  LOG     2025-11-12T12:33:48.815Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#30\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.604] Server  LOG     2025-11-12T12:33:48.816Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#30\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.604] Server  LOG     2025-11-12T12:33:48.816Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#33\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:34.657] Server  LOG     prisma:query "SELECT 1"
+[00:00:34.657] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"organizationId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:34.657] Server  LOG     2025-11-12T12:33:48.869Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#32\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.657] Server  LOG     2025-11-12T12:33:48.869Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#32\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.713] Server  LOG     prisma:query "SELECT \"public\".\"Invitation\".\"id\", \"public\".\"Invitation\".\"organizationId\", \"public\".\"Invitation\".\"email\", \"public\".\"Invitation\".\"role\", \"public\".\"Invitation\".\"status\"::text, \"public\".\"Invitation\".\"teamId\", \"public\".\"Invitation\".\"inviterId\", \"public\".\"Invitation\".\"expiresAt\", \"public\".\"Invitation\".\"createdAt\", \"public\".\"Invitation\".\"updatedAt\" FROM \"public\".\"Invitation\" WHERE \"public\".\"Invitation\".\"organizationId\" = $1 ORDER BY \"public\".\"Invitation\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:34.713] Server  LOG     2025-11-12T12:33:48.925Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#31\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.713] Server  LOG     2025-11-12T12:33:48.925Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#31\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.713] Server  LOG     2025-11-12T12:33:48.925Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#34\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:34.767] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) ORDER BY \"public\".\"User\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:34.767] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:34.768] Server  LOG     2025-11-12T12:33:48.979Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#34\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.768] Server  LOG     2025-11-12T12:33:48.980Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#34\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.768] Server  LOG     2025-11-12T12:33:48.980Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#35\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:34.768] Server  LOG     2025-11-12T12:33:48.980Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#33\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.769] Server  LOG     2025-11-12T12:33:48.980Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#33\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.769] Server  LOG     2025-11-12T12:33:48.981Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#36\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:34.822] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE (\"public\".\"Member\".\"userId\" = $1 AND \"public\".\"Member\".\"organizationId\" = $2) LIMIT $3 OFFSET $4"
+[00:00:34.822] Server  LOG     2025-11-12T12:33:49.034Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#35\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.822] Server  LOG     2025-11-12T12:33:49.034Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#35\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:34.878] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:34.879] Server  LOG     2025-11-12T12:33:49.091Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#36\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:34.880] Server  LOG     2025-11-12T12:33:49.091Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#36\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.719] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:35.719] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:35.744] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:35.744] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:35.750] Server  LOG     2025-11-12T12:33:49.962Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#37\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:35.752] Server  LOG     2025-11-12T12:33:49.963Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#38\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:35.805] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:35.805] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:35.806] Server  LOG     2025-11-12T12:33:50.018Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#38\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.806] Server  LOG     2025-11-12T12:33:50.018Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#38\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.806] Server  LOG     2025-11-12T12:33:50.018Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#39\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:35.807] Server  LOG     2025-11-12T12:33:50.019Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#37\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.807] Server  LOG     2025-11-12T12:33:50.019Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#37\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.807] Server  LOG     2025-11-12T12:33:50.019Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#40\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:35.860] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:35.860] Server  LOG     2025-11-12T12:33:50.072Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#39\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.861] Server  LOG     2025-11-12T12:33:50.073Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#39\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.861] Server  LOG     2025-11-12T12:33:50.073Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#41\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:35.862] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:35.863] Server  LOG     2025-11-12T12:33:50.075Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#40\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.863] Server  LOG     2025-11-12T12:33:50.075Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#40\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.863] Server  LOG     2025-11-12T12:33:50.075Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#42\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:35.914] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:35.914] Server  LOG     2025-11-12T12:33:50.126Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#41\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.914] Server  LOG     2025-11-12T12:33:50.126Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#41\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.914] Server  LOG     2025-11-12T12:33:50.126Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#43\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:35.915] Server  LOG     2025-11-12T12:33:50.127Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#44\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:35.969] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"organizationId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:35.969] Server  LOG     prisma:query "SELECT \"public\".\"Invitation\".\"id\", \"public\".\"Invitation\".\"organizationId\", \"public\".\"Invitation\".\"email\", \"public\".\"Invitation\".\"role\", \"public\".\"Invitation\".\"status\"::text, \"public\".\"Invitation\".\"teamId\", \"public\".\"Invitation\".\"inviterId\", \"public\".\"Invitation\".\"expiresAt\", \"public\".\"Invitation\".\"createdAt\", \"public\".\"Invitation\".\"updatedAt\" FROM \"public\".\"Invitation\" WHERE \"public\".\"Invitation\".\"organizationId\" = $1 ORDER BY \"public\".\"Invitation\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:35.969] Server  LOG     2025-11-12T12:33:50.181Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#43\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.969] Server  LOG     2025-11-12T12:33:50.181Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#43\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.970] Server  LOG     2025-11-12T12:33:50.182Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#44\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.970] Server  LOG     2025-11-12T12:33:50.182Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#44\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.970] Server  LOG     2025-11-12T12:33:50.182Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#45\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:35.971] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:35.971] Server  LOG     2025-11-12T12:33:50.183Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#42\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:35.971] Server  LOG     2025-11-12T12:33:50.183Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#42\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:35.971] Server  LOG     2025-11-12T12:33:50.183Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#46\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:36.027] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) ORDER BY \"public\".\"User\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:36.028] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:36.028] Server  LOG     2025-11-12T12:33:50.240Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#45\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:36.028] Server  LOG     2025-11-12T12:33:50.240Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#45\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:36.029] Server  LOG     2025-11-12T12:33:50.241Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#47\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:36.029] Server  LOG     2025-11-12T12:33:50.241Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#46\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:36.030] Server  LOG     2025-11-12T12:33:50.242Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#46\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:36.125] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE (\"public\".\"Member\".\"userId\" = $1 AND \"public\".\"Member\".\"organizationId\" = $2) LIMIT $3 OFFSET $4"
+[00:00:36.125] Server  LOG     2025-11-12T12:33:50.337Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#47\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:36.126] Server  LOG     2025-11-12T12:33:50.338Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#47\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:39.731] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:39.731] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:39.760] Server  LOG     2025-11-12T12:33:53.972Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#48\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:39.841] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:39.841] Server  LOG     2025-11-12T12:33:54.053Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#48\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:39.842] Server  LOG     2025-11-12T12:33:54.054Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#48\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:39.842] Server  LOG     2025-11-12T12:33:54.054Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#49\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:39.900] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:39.900] Server  LOG     2025-11-12T12:33:54.112Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#49\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:39.900] Server  LOG     2025-11-12T12:33:54.112Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#49\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:40.745] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:40.746] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:40.866] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:40.866] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:40.886] Server  LOG     2025-11-12T12:33:55.098Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#50\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:40.943] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:40.943] Server  LOG     2025-11-12T12:33:55.155Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#50\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:40.943] Server  LOG     2025-11-12T12:33:55.155Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#50\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:40.944] Server  LOG     2025-11-12T12:33:55.155Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#51\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:40.999] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:41.000] Server  LOG     2025-11-12T12:33:55.212Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#51\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.000] Server  LOG     2025-11-12T12:33:55.212Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#51\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.001] Server  LOG     2025-11-12T12:33:55.213Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#52\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:41.055] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:41.055] Server  LOG     2025-11-12T12:33:55.267Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#52\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.056] Server  LOG     2025-11-12T12:33:55.268Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#52\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.056] Server  LOG     2025-11-12T12:33:55.268Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#53\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:41.111] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:41.111] Server  LOG     2025-11-12T12:33:55.323Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#53\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.111] Server  LOG     2025-11-12T12:33:55.323Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#53\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.119] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:41.119] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:41.122] Server  LOG     2025-11-12T12:33:55.334Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#54\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:41.177] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:41.178] Server  LOG     2025-11-12T12:33:55.389Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#54\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.178] Server  LOG     2025-11-12T12:33:55.390Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#54\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.178] Server  LOG     2025-11-12T12:33:55.390Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#55\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:41.233] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:41.233] Server  LOG     2025-11-12T12:33:55.445Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#55\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.234] Server  LOG     2025-11-12T12:33:55.446Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#55\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.234] Server  LOG     2025-11-12T12:33:55.446Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#56\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:41.368] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:41.368] Server  LOG     2025-11-12T12:33:55.580Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#56\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.368] Server  LOG     2025-11-12T12:33:55.580Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#56\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:41.369] Server  LOG     2025-11-12T12:33:55.580Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#57\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:41.423] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:41.423] Server  LOG     2025-11-12T12:33:55.635Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#57\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:41.424] Server  LOG     2025-11-12T12:33:55.636Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#57\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:44.935] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:44.936] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:44.959] Server  LOG     2025-11-12T12:33:59.171Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#58\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:45.085] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:45.085] Server  LOG     2025-11-12T12:33:59.297Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#58\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:45.085] Server  LOG     2025-11-12T12:33:59.297Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#58\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:45.086] Server  LOG     2025-11-12T12:33:59.298Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#59\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:45.141] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:45.141] Server  LOG     2025-11-12T12:33:59.353Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#59\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:45.141] Server  LOG     2025-11-12T12:33:59.353Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#59\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:45.146] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:45.146] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:58.278] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:58.278] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:58.301] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:58.301] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:00:58.303] Server  LOG     2025-11-12T12:34:12.515Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#60\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.304] Server  LOG     2025-11-12T12:34:12.516Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#61\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.357] Server  LOG     prisma:query "SELECT 1"
+[00:00:58.358] Server  LOG     prisma:query "SELECT 1"
+[00:00:58.411] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:58.411] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:00:58.411] Server  LOG     2025-11-12T12:34:12.623Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#61\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.412] Server  LOG     2025-11-12T12:34:12.624Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#61\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.412] Server  LOG     2025-11-12T12:34:12.624Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#62\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.412] Server  LOG     2025-11-12T12:34:12.624Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#60\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.413] Server  LOG     2025-11-12T12:34:12.624Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#60\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.413] Server  LOG     2025-11-12T12:34:12.625Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#63\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.464] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:58.464] Server  LOG     2025-11-12T12:34:12.676Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#62\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.464] Server  LOG     2025-11-12T12:34:12.676Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#62\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.465] Server  LOG     2025-11-12T12:34:12.677Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#64\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.467] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:58.467] Server  LOG     2025-11-12T12:34:12.679Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#63\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.467] Server  LOG     2025-11-12T12:34:12.679Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#63\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.467] Server  LOG     2025-11-12T12:34:12.679Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#65\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:58.517] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:00:58.518] Server  LOG     2025-11-12T12:34:12.730Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#64\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.518] Server  LOG     2025-11-12T12:34:12.730Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#64\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.518] Server  LOG     2025-11-12T12:34:12.730Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#66\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:58.518] Server  LOG     2025-11-12T12:34:12.730Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#67\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:58.521] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"userId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:58.521] Server  LOG     2025-11-12T12:34:12.733Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#65\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.521] Server  LOG     2025-11-12T12:34:12.733Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#65\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.521] Server  LOG     2025-11-12T12:34:12.733Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#68\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:58.571] Server  LOG     prisma:query "SELECT 1"
+[00:00:58.571] Server  LOG     prisma:query "SELECT \"public\".\"Invitation\".\"id\", \"public\".\"Invitation\".\"organizationId\", \"public\".\"Invitation\".\"email\", \"public\".\"Invitation\".\"role\", \"public\".\"Invitation\".\"status\"::text, \"public\".\"Invitation\".\"teamId\", \"public\".\"Invitation\".\"inviterId\", \"public\".\"Invitation\".\"expiresAt\", \"public\".\"Invitation\".\"createdAt\", \"public\".\"Invitation\".\"updatedAt\" FROM \"public\".\"Invitation\" WHERE \"public\".\"Invitation\".\"organizationId\" = $1 ORDER BY \"public\".\"Invitation\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:58.572] Server  LOG     2025-11-12T12:34:12.784Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#66\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.572] Server  LOG     2025-11-12T12:34:12.784Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#66\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.576] Server  LOG     prisma:query "SELECT \"public\".\"Organization\".\"id\", \"public\".\"Organization\".\"name\", \"public\".\"Organization\".\"slug\", \"public\".\"Organization\".\"logo\", \"public\".\"Organization\".\"metadata\", \"public\".\"Organization\".\"createdAt\", \"public\".\"Organization\".\"updatedAt\" FROM \"public\".\"Organization\" WHERE \"public\".\"Organization\".\"id\" IN ($1,$2) ORDER BY \"public\".\"Organization\".\"id\" ASC LIMIT $3 OFFSET $4"
+[00:00:58.576] Server  LOG     2025-11-12T12:34:12.788Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#68\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.576] Server  LOG     2025-11-12T12:34:12.788Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#68\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.663] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE \"public\".\"Member\".\"organizationId\" = $1 ORDER BY \"public\".\"Member\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:58.664] Server  LOG     2025-11-12T12:34:12.875Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#67\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.664] Server  LOG     2025-11-12T12:34:12.876Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#67\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.664] Server  LOG     2025-11-12T12:34:12.876Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#69\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m:" {}
+[00:00:58.772] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" IN ($1) ORDER BY \"public\".\"User\".\"id\" ASC LIMIT $2 OFFSET $3"
+[00:00:58.773] Server  LOG     2025-11-12T12:34:12.985Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#69\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.773] Server  LOG     2025-11-12T12:34:12.985Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#69\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindMany\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:00:58.773] Server  LOG     2025-11-12T12:34:12.985Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#70\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:00:58.882] Server  LOG     prisma:query "SELECT \"public\".\"Member\".\"id\", \"public\".\"Member\".\"organizationId\", \"public\".\"Member\".\"userId\", \"public\".\"Member\".\"role\", \"public\".\"Member\".\"createdAt\" FROM \"public\".\"Member\" WHERE (\"public\".\"Member\".\"userId\" = $1 AND \"public\".\"Member\".\"organizationId\" = $2) LIMIT $3 OFFSET $4"
+[00:00:58.882] Server  LOG     2025-11-12T12:34:13.094Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#70\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:00:58.883] Server  LOG     2025-11-12T12:34:13.095Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#70\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:01:11.721] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:01:11.721] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:01:11.739] Server  LOG     2025-11-12T12:34:25.951Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#71\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:01:11.830] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:01:11.830] Server  LOG     2025-11-12T12:34:26.042Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#71\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:01:11.831] Server  LOG     2025-11-12T12:34:26.043Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#71\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:01:11.831] Server  LOG     2025-11-12T12:34:26.043Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#72\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:01:11.887] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:01:11.887] Server  LOG     2025-11-12T12:34:26.099Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#72\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:01:11.887] Server  LOG     2025-11-12T12:34:26.099Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#72\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:01:11.892] Server  WARN     ⚠ ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma/client
+Package @prisma/client can't be external
+The request @prisma/client/runtime/library.js matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:01:11.892] Server  WARN     ⚠ ./packages/db/src
+Package @prisma/client can't be external
+The request @prisma/client matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @prisma/client from the project directory.
+
+
+[00:01:11.915] Server  LOG     2025-11-12T12:34:26.127Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:01:11.973] Server  LOG     2025-11-12T12:34:26.184Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:01:11.973] Server  LOG     2025-11-12T12:34:26.185Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#2\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}
+[00:01:11.974] Server  LOG     2025-11-12T12:34:26.185Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[1/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m:" {}
+[00:01:11.974] Server  LOG     prisma:query "SELECT \"public\".\"Session\".\"id\", \"public\".\"Session\".\"userId\", \"public\".\"Session\".\"expiresAt\", \"public\".\"Session\".\"token\", \"public\".\"Session\".\"ipAddress\", \"public\".\"Session\".\"userAgent\", \"public\".\"Session\".\"impersonatedBy\", \"public\".\"Session\".\"activeOrganizationId\", \"public\".\"Session\".\"activeTeamId\", \"public\".\"Session\".\"createdAt\", \"public\".\"Session\".\"updatedAt\" FROM \"public\".\"Session\" WHERE \"public\".\"Session\".\"token\" = $1 LIMIT $2 OFFSET $3"
+[00:01:12.029] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"email\", \"public\".\"User\".\"emailVerified\", \"public\".\"User\".\"name\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"banned\", \"public\".\"User\".\"banReason\", \"public\".\"User\".\"banExpires\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE \"public\".\"User\".\"id\" = $1 LIMIT $2 OFFSET $3"
+[00:01:12.029] Server  LOG     2025-11-12T12:34:26.241Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[2/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(DB Result)\u001b[0m:" {}
+[00:01:12.030] Server  LOG     2025-11-12T12:34:26.242Z INFO [Better Auth]: [Prisma Adapter] "\u001b[35m#3\u001b[0m \u001b[40m\u001b[33m[3/3]\u001b[0m" "\u001b[1mfindOne\u001b[0m \u001b[2m(Parsed Result)\u001b[0m:" {}

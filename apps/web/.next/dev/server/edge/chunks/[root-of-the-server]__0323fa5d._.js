@@ -15,26 +15,36 @@ module.exports = mod;
 "use strict";
 
 __turbopack_context__.s([
-    "AUTH_API_BASE_URL",
-    ()=>AUTH_API_BASE_URL,
+    "BETTER_AUTH_BASE_PATH",
+    ()=>BETTER_AUTH_BASE_PATH,
+    "BETTER_AUTH_BASE_URL",
+    ()=>BETTER_AUTH_BASE_URL,
     "DEFAULT_AUTH_REDIRECT",
     ()=>DEFAULT_AUTH_REDIRECT,
-    "SESSION_COOKIE_NAME",
-    ()=>SESSION_COOKIE_NAME,
-    "calculateCookieMaxAge",
-    ()=>calculateCookieMaxAge,
     "resolveRedirectPath",
     ()=>resolveRedirectPath
 ]);
-const SESSION_COOKIE_NAME = "amplify_session";
 const DEFAULT_AUTH_REDIRECT = "/amplify/default";
-const AUTH_API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? process.env.AUTH_API_URL ?? "http://localhost:3001";
-function calculateCookieMaxAge(expiresAt, fallbackSeconds = 60 * 60 * 24 * 7) {
-    // Ensure cookie expiration stays in sync with server session expiry.
-    const expiresAtDate = new Date(expiresAt);
-    const diff = Math.floor((expiresAtDate.getTime() - Date.now()) / 1000);
-    return Number.isFinite(diff) && diff > 0 ? diff : fallbackSeconds;
+const betterAuthBaseUrlInput = process.env.NEXT_PUBLIC_BETTER_AUTH_URL ?? process.env.BETTER_AUTH_API_URL ?? undefined;
+const betterAuthBasePathInput = process.env.NEXT_PUBLIC_BETTER_AUTH_PATH ?? process.env.BETTER_AUTH_API_PATH ?? "/api/auth";
+function toAbsoluteUrl(value) {
+    if (!value) return undefined;
+    try {
+        return new URL(value).toString().replace(/\/+$/, "");
+    } catch (error) {
+        if ("TURBOPACK compile-time truthy", 1) {
+            console.warn(`[better-auth] Ignoring invalid Better Auth base URL. Provide an absolute URL instead. Received: ${value}`, error);
+        }
+        return undefined;
+    }
 }
+function normalizePath(pathValue) {
+    const trimmed = pathValue.trim();
+    if (!trimmed) return "/api/auth";
+    return trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+}
+const BETTER_AUTH_BASE_URL = toAbsoluteUrl(betterAuthBaseUrlInput);
+const BETTER_AUTH_BASE_PATH = normalizePath(betterAuthBasePathInput);
 function resolveRedirectPath(path) {
     if (!path) return DEFAULT_AUTH_REDIRECT;
     if (!path.startsWith("/")) return DEFAULT_AUTH_REDIRECT;
@@ -69,13 +79,9 @@ async function middleware(request) {
     if (pathname.startsWith("/api")) {
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next();
     }
-    const sessionToken = request.cookies.get(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["SESSION_COOKIE_NAME"])?.value;
-    if (!sessionToken) {
-        return isPublic ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next() : redirectToLogin(request);
-    }
-    const session = await validateSession(sessionToken);
-    if (!session) {
-        return isPublic ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next() : redirectToLogin(request, true);
+    const sessionState = await validateSession(request);
+    if (!sessionState.valid) {
+        return isPublic ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next() : redirectToLogin(request, sessionState.shouldClear);
     }
     if (isAuthRoute) {
         const redirectUrl = new URL(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["DEFAULT_AUTH_REDIRECT"], request.url);
@@ -85,22 +91,43 @@ async function middleware(request) {
     }
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next();
 }
-async function validateSession(token) {
+async function validateSession(request) {
+    const cookies = request.headers.get("cookie");
+    if (!cookies) {
+        return {
+            valid: false,
+            shouldClear: false
+        };
+    }
+    const origin = __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["BETTER_AUTH_BASE_URL"] ?? request.nextUrl.origin;
+    const path = `${__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["BETTER_AUTH_BASE_PATH"].replace(/\/$/, "")}/get-session`;
+    const endpoint = new URL(path, origin);
     try {
-        const response = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["AUTH_API_BASE_URL"]}/auth/session`, {
+        const response = await fetch(endpoint, {
             method: "GET",
             headers: {
-                Authorization: `Bearer ${token}`
+                cookie: cookies
             },
             cache: "no-store"
         });
         if (!response.ok) {
-            return null;
+            const shouldClear = response.status === 401;
+            return {
+                valid: false,
+                shouldClear
+            };
         }
-        return await response.json();
+        const payload = await response.json().catch(()=>null);
+        return {
+            valid: Boolean(payload?.session?.token),
+            shouldClear: false
+        };
     } catch (error) {
         console.error("Failed to validate session", error);
-        return null;
+        return {
+            valid: false,
+            shouldClear: false
+        };
     }
 }
 function isPublicPath(pathname) {
@@ -115,10 +142,20 @@ function redirectToLogin(request, shouldClearCookie = false) {
     const response = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$1_$40$babel$2b$core$40$7$2e$28$2e$5_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].redirect(redirectUrl);
     response.headers.set("Cache-Control", "no-store");
     if (shouldClearCookie) {
-        response.cookies.delete(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$lib$2f$auth$2e$ts__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["SESSION_COOKIE_NAME"]);
+        for (const name of BETTER_AUTH_COOKIE_CANDIDATES){
+            response.cookies.delete(name);
+        }
     }
     return response;
 }
+const BETTER_AUTH_COOKIE_CANDIDATES = [
+    "better-auth.session_token",
+    "__Secure-better-auth.session_token",
+    "better-auth.session_data",
+    "__Secure-better-auth.session_data",
+    "better-auth.dont_remember",
+    "__Secure-better-auth.dont_remember"
+];
 const config = {
     matcher: [
         "/((?!_next/static|_next/image|favicon.ico|assets).*)"

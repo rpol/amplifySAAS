@@ -1,23 +1,41 @@
-export const SESSION_COOKIE_NAME = "amplify_session";
-
 export const DEFAULT_AUTH_REDIRECT = "/amplify/default";
 
-export const AUTH_API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ??
-  process.env.AUTH_API_URL ??
-  "http://localhost:3001";
+const betterAuthBaseUrlInput =
+  process.env.NEXT_PUBLIC_BETTER_AUTH_URL ??
+  process.env.BETTER_AUTH_API_URL ??
+  undefined;
+
+const betterAuthBasePathInput =
+  process.env.NEXT_PUBLIC_BETTER_AUTH_PATH ??
+  process.env.BETTER_AUTH_API_PATH ??
+  "/api/auth";
+
+function toAbsoluteUrl(value?: string): string | undefined {
+  if (!value) return undefined;
+  try {
+    return new URL(value).toString().replace(/\/+$/, "");
+  } catch (error) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn(
+        `[better-auth] Ignoring invalid Better Auth base URL. Provide an absolute URL instead. Received: ${value}`,
+        error,
+      );
+    }
+    return undefined;
+  }
+}
+
+function normalizePath(pathValue: string): string {
+  const trimmed = pathValue.trim();
+  if (!trimmed) return "/api/auth";
+  return trimmed.startsWith("/") ? trimmed : `/${trimmed}`;
+}
+
+export const BETTER_AUTH_BASE_URL = toAbsoluteUrl(betterAuthBaseUrlInput);
+
+export const BETTER_AUTH_BASE_PATH = normalizePath(betterAuthBasePathInput);
 
 export type { AuthResponse } from "@amplify/types";
-
-export function calculateCookieMaxAge(
-  expiresAt: string,
-  fallbackSeconds = 60 * 60 * 24 * 7,
-): number {
-  // Ensure cookie expiration stays in sync with server session expiry.
-  const expiresAtDate = new Date(expiresAt);
-  const diff = Math.floor((expiresAtDate.getTime() - Date.now()) / 1000);
-  return Number.isFinite(diff) && diff > 0 ? diff : fallbackSeconds;
-}
 
 export function resolveRedirectPath(path?: string | null): string {
   if (!path) return DEFAULT_AUTH_REDIRECT;

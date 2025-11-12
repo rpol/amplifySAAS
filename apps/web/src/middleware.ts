@@ -1,11 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-import { type AuthResponse } from "@amplify/types";
-
 import {
-  AUTH_API_BASE_URL,
+  BETTER_AUTH_BASE_PATH,
+  BETTER_AUTH_BASE_URL,
   DEFAULT_AUTH_REDIRECT,
-  SESSION_COOKIE_NAME,
 } from "@/lib/auth";
 
 const PUBLIC_PATHS = ["/auth", "/unauthorized"];
@@ -20,16 +18,12 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const sessionToken = request.cookies.get(SESSION_COOKIE_NAME)?.value;
+  const sessionState = await validateSession(request);
 
-  if (!sessionToken) {
-    return isPublic ? NextResponse.next() : redirectToLogin(request);
-  }
-
-  const session = await validateSession(sessionToken);
-
-  if (!session) {
-    return isPublic ? NextResponse.next() : redirectToLogin(request, true);
+  if (!sessionState.valid) {
+    return isPublic
+      ? NextResponse.next()
+      : redirectToLogin(request, sessionState.shouldClear);
   }
 
   if (isAuthRoute) {
@@ -42,24 +36,41 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-async function validateSession(token: string): Promise<AuthResponse | null> {
+async function validateSession(
+  request: NextRequest,
+): Promise<{ valid: boolean; shouldClear: boolean }> {
+  const cookies = request.headers.get("cookie");
+
+  if (!cookies) {
+    return { valid: false, shouldClear: false };
+  }
+
+  const origin = BETTER_AUTH_BASE_URL ?? request.nextUrl.origin;
+  const path = `${BETTER_AUTH_BASE_PATH.replace(/\/$/, "")}/get-session`;
+  const endpoint = new URL(path, origin);
+
   try {
-    const response = await fetch(`${AUTH_API_BASE_URL}/auth/session`, {
+    const response = await fetch(endpoint, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`,
+        cookie: cookies,
       },
       cache: "no-store",
     });
 
     if (!response.ok) {
-      return null;
+      const shouldClear = response.status === 401;
+      return { valid: false, shouldClear };
     }
 
-    return (await response.json()) as AuthResponse;
+    const payload = (await response.json().catch(() => null)) as {
+      session?: { token?: string } | null;
+    } | null;
+
+    return { valid: Boolean(payload?.session?.token), shouldClear: false };
   } catch (error) {
     console.error("Failed to validate session", error);
-    return null;
+    return { valid: false, shouldClear: false };
   }
 }
 
@@ -80,11 +91,22 @@ function redirectToLogin(request: NextRequest, shouldClearCookie = false) {
   response.headers.set("Cache-Control", "no-store");
 
   if (shouldClearCookie) {
-    response.cookies.delete(SESSION_COOKIE_NAME);
+    for (const name of BETTER_AUTH_COOKIE_CANDIDATES) {
+      response.cookies.delete(name);
+    }
   }
 
   return response;
 }
+
+const BETTER_AUTH_COOKIE_CANDIDATES = [
+  "better-auth.session_token",
+  "__Secure-better-auth.session_token",
+  "better-auth.session_data",
+  "__Secure-better-auth.session_data",
+  "better-auth.dont_remember",
+  "__Secure-better-auth.dont_remember",
+];
 
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico|assets).*)"],
