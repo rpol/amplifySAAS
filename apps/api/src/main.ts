@@ -21,7 +21,7 @@ async function bootstrap(): Promise<void> {
       whitelist: true,
       transform: true,
       transformOptions: { enableImplicitConversion: true },
-    })
+    }),
   );
 
   const port = Number(process.env.PORT ?? 3001);

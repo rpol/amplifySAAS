@@ -1,3 +1,4 @@
+import { LoginDto, RegisterDto, type AuthResponse } from "@amplify/types";
 import {
   Body,
   Controller,
@@ -9,7 +10,6 @@ import {
 } from "@nestjs/common";
 
 import { AuthService } from "./auth.service";
-import { LoginDto, RegisterDto, type AuthResponse } from "@amplify/types";
 
 @Controller("auth")
 export class AuthController {
@@ -28,7 +28,7 @@ export class AuthController {
 
   @Get("session")
   async session(
-    @Headers("authorization") authorization?: string
+    @Headers("authorization") authorization?: string,
   ): Promise<AuthResponse> {
     const token = this.extractToken(authorization);
 
@@ -48,7 +48,7 @@ export class AuthController {
   @Post("logout")
   @HttpCode(204)
   async logout(
-    @Headers("authorization") authorization?: string
+    @Headers("authorization") authorization?: string,
   ): Promise<void> {
     const token = this.extractToken(authorization);
 

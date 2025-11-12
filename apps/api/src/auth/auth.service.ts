@@ -1,19 +1,18 @@
-import {
-  ConflictException,
-  Injectable,
-  UnauthorizedException,
-} from "@nestjs/common";
 import { randomBytes } from "crypto";
-import { compare, hash } from "bcryptjs";
 
 import { Prisma, prisma, type User } from "@amplify/db";
-
 import {
   LoginDto,
   RegisterDto,
   type AuthResponse,
   type AuthUserSummary,
 } from "@amplify/types";
+import {
+  ConflictException,
+  Injectable,
+  UnauthorizedException,
+} from "@nestjs/common";
+import { compare, hash } from "bcryptjs";
 
 const DEFAULT_SESSION_SECONDS = 60 * 60 * 24 * 7; // 7 days
 const REMEMBER_ME_SESSION_SECONDS = 60 * 60 * 24 * 30; // 30 days
@@ -56,7 +55,7 @@ export class AuthService {
       const session = await this.createSession(
         tx,
         user.id,
-        DEFAULT_SESSION_SECONDS
+        DEFAULT_SESSION_SECONDS,
       );
 
       return { user, session };
@@ -136,7 +135,7 @@ export class AuthService {
   private async createSession(
     tx: PrismaClientLike,
     userId: string,
-    maxAgeSeconds: number
+    maxAgeSeconds: number,
   ) {
     const token = randomBytes(48).toString("hex");
     const expiresAt = new Date(Date.now() + maxAgeSeconds * 1000);
@@ -167,11 +166,11 @@ export class AuthService {
 
   private toAuthResponse(
     user: User,
-    session: { token: string; expiresAt: Date }
+    session: { token: string; expiresAt: Date },
   ): AuthResponse {
     const maxAge = Math.max(
       0,
-      Math.floor((session.expiresAt.getTime() - Date.now()) / 1000)
+      Math.floor((session.expiresAt.getTime() - Date.now()) / 1000),
     );
     const userSummary: AuthUserSummary = {
       id: user.id,

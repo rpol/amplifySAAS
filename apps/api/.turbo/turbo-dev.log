@@ -2,20 +2,146 @@
 > @amplify/api@0.0.0 dev /home/rpol/Development/Amplify/AmplifySAAS/apps/api
 > nest start --watch
 
-[2J[3J[H[[90m6:43:57 PM[0m] Starting compilation in watch mode...
+[2J[3J[H[[90m8:05:47 PM[0m] Starting compilation in watch mode...
 
-[[90m6:43:57 PM[0m] Found 0 errors. Watching for file changes.
+[[90m8:05:47 PM[0m] Found 0 errors. Watching for file changes.
 
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +4ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +8ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/session, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
-[32m[Nest] 96337  - [39m11/11/2025, 6:43:58 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/session, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 116550  - [39m11/11/2025, 8:05:48 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
 API server is running at http://localhost:3001
-[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m 
+Invalid `db_1.prisma.session.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:74:51
+
+  71     return this.toAuthResponse(account.user, session);
+  72 }
+  73 async validateSession(token) {
+→ 74     const session = await db_1.prisma.session.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[31m[Nest] 116550  - [39m11/11/2025, 8:06:03 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientInitializationError: 
+Invalid `db_1.prisma.session.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:74:51
+
+  71     return this.toAuthResponse(account.user, session);
+  72 }
+  73 async validateSession(token) {
+→ 74     const session = await db_1.prisma.session.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at $n.handleRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:7615)
+    at $n.handleAndLogRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6623)
+    at $n.request (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6307)
+    at async l (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:130:9633)
+    at async AuthService.validateSession [90m(/home/rpol/Development/Amplify/AmplifySAAS/apps/api/[39mdist/auth/auth.service.js:74:25[90m)[39m
+    at async AuthController.session [90m(/home/rpol/Development/Amplify/AmplifySAAS/apps/api/[39mdist/auth/auth.controller.js:34:25[90m)[39m
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-execution-context.js:46:28
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-proxy.js:9:17 {
+  clientVersion: [32m'5.22.0'[39m,
+  errorCode: [90mundefined[39m
+}
+[31mprisma:error[39m 
+Invalid `db_1.prisma.account.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:48:51
+
+  45     return this.toAuthResponse(result.user, result.session);
+  46 }
+  47 async login(dto) {
+→ 48     const account = await db_1.prisma.account.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[31m[Nest] 116550  - [39m11/11/2025, 8:06:14 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientInitializationError: 
+Invalid `db_1.prisma.account.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:48:51
+
+  45     return this.toAuthResponse(result.user, result.session);
+  46 }
+  47 async login(dto) {
+→ 48     const account = await db_1.prisma.account.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at $n.handleRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:7615)
+    at $n.handleAndLogRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6623)
+    at $n.request (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6307)
+    at async l (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:130:9633)
+    at async AuthService.login [90m(/home/rpol/Development/Amplify/AmplifySAAS/apps/api/[39mdist/auth/auth.service.js:48:25[90m)[39m
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-execution-context.js:46:28
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-proxy.js:9:17 {
+  clientVersion: [32m'5.22.0'[39m,
+  errorCode: [90mundefined[39m
+}
+[31mprisma:error[39m 
+Invalid `db_1.prisma.account.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:48:51
+
+  45     return this.toAuthResponse(result.user, result.session);
+  46 }
+  47 async login(dto) {
+→ 48     const account = await db_1.prisma.account.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[31m[Nest] 116550  - [39m11/11/2025, 8:06:22 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientInitializationError: 
+Invalid `db_1.prisma.account.findUnique()` invocation in
+/home/rpol/Development/Amplify/AmplifySAAS/apps/api/dist/auth/auth.service.js:48:51
+
+  45     return this.toAuthResponse(result.user, result.session);
+  46 }
+  47 async login(dto) {
+→ 48     const account = await db_1.prisma.account.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "postgresql"
+ 7 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at $n.handleRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:7615)
+    at $n.handleAndLogRequestError (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6623)
+    at $n.request (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:121:6307)
+    at async l (/home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@prisma+client@5.22.0_prisma@5.22.0/node_modules/[4m@prisma/client[24m/runtime/library.js:130:9633)
+    at async AuthService.login [90m(/home/rpol/Development/Amplify/AmplifySAAS/apps/api/[39mdist/auth/auth.service.js:48:25[90m)[39m
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-execution-context.js:46:28
+    at async /home/rpol/Development/Amplify/AmplifySAAS/node_modules/[4m.pnpm[24m/@nestjs+core@11.1.8_@nestjs+common@11.1.8_class-transformer@0.5.1_class-validator@0.14.2_refl_zqfxmf2cyj6wwzbyrqnreltwti/node_modules/[4m@nestjs/core[24m/router/router-proxy.js:9:17 {
+  clientVersion: [32m'5.22.0'[39m,
+  errorCode: [90mundefined[39m
+}

@@ -7,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
-const common_1 = require("@nestjs/common");
 const crypto_1 = require("crypto");
-const bcryptjs_1 = require("bcryptjs");
 const db_1 = require("@amplify/db");
+const common_1 = require("@nestjs/common");
+const bcryptjs_1 = require("bcryptjs");
 const DEFAULT_SESSION_SECONDS = 60 * 60 * 24 * 7;
 const REMEMBER_ME_SESSION_SECONDS = 60 * 60 * 24 * 30;
 const AUTH_PROVIDER_ID = "email";
