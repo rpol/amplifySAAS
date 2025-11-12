@@ -1,5 +1,35 @@
 {
   "node": {
+    "0065f83934fe0237621f88ef637a91915319cde884": {
+      "workers": {
+        "app/(main)/auth/v2/login/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentSession",
+          "filename": "apps/web/src/server/server-actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/auth/v2/login/page": "rsc"
+      },
+      "exportedName": "getCurrentSession",
+      "filename": "apps/web/src/server/server-actions.ts"
+    },
+    "00bc3a07351f2e1285eed30d86cfbd92841dcfbebd": {
+      "workers": {
+        "app/(main)/auth/v2/login/page": {
+          "moduleId": "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logout",
+          "filename": "apps/web/src/server/server-actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/auth/v2/login/page": "rsc"
+      },
+      "exportedName": "logout",
+      "filename": "apps/web/src/server/server-actions.ts"
+    },
     "4056b3dfaa9f1c35fb2c2c70ef6e8e3d08dfffe293": {
       "workers": {
         "app/(main)/auth/v2/login/page": {

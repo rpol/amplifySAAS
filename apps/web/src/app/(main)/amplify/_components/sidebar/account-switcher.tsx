@@ -1,8 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 
+import { useRouter } from "next/navigation";
+
+import { type AuthUserSummary } from "@amplify/types";
 import { BadgeCheck, Bell, CreditCard, LogOut } from "lucide-react";
+import { toast } from "sonner";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -14,26 +18,98 @@ import {
   DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
 import { cn, getInitials } from "@/lib/utils";
+import { logout } from "@/server/server-actions";
 
 export function AccountSwitcher({
-  users,
+  currentUser,
+  impersonatedBy,
+  accounts,
 }: {
-  readonly users: ReadonlyArray<{
+  readonly currentUser: AuthUserSummary | null;
+  readonly impersonatedBy?: string | null;
+  readonly accounts?: ReadonlyArray<{
     readonly id: string;
     readonly name: string;
     readonly email: string;
-    readonly avatar: string;
+    readonly avatar?: string | null;
     readonly role: string;
   }>;
 }) {
-  const [activeUser, setActiveUser] = useState(users[0]);
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
+  type SwitcherAccount = {
+    readonly id: string;
+    readonly name: string;
+    readonly email: string;
+    readonly avatar?: string | null;
+    readonly role: string;
+  };
+
+  const accountItems = useMemo<SwitcherAccount[]>(() => {
+    if (accounts && accounts.length > 0) {
+      return accounts.map((account) => ({ ...account }));
+    }
+
+    if (!currentUser) {
+      return [];
+    }
+
+    return [
+      {
+        id: currentUser.id,
+        name: currentUser.name,
+        email: currentUser.email,
+        avatar: null,
+        role: currentUser.role,
+      },
+    ];
+  }, [accounts, currentUser]);
+
+  const [selectedUserId, setSelectedUserId] = useState<string | null>(
+    () => accounts?.[0]?.id ?? currentUser?.id ?? null,
+  );
+
+  const activeUser = useMemo(() => {
+    if (accountItems.length === 0) {
+      return null;
+    }
+
+    if (!selectedUserId) {
+      return accountItems[0];
+    }
+
+    return (
+      accountItems.find((account) => account.id === selectedUserId) ??
+      accountItems[0]
+    );
+  }, [accountItems, selectedUserId]);
+
+  if (!activeUser) {
+    return null;
+  }
+
+  const handleLogout = () => {
+    startTransition(async () => {
+      const result = await logout();
+
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+
+      toast.success("Logged out successfully.");
+      router.replace("/auth/v2/login");
+      router.refresh();
+    });
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="size-9 rounded-lg">
           <AvatarImage
-            src={activeUser.avatar || undefined}
+            src={activeUser.avatar ?? undefined}
             alt={activeUser.name}
           />
           <AvatarFallback className="rounded-lg">
@@ -47,7 +123,7 @@ export function AccountSwitcher({
         align="end"
         sideOffset={4}
       >
-        {users.map((user) => (
+        {accountItems.map((user) => (
           <DropdownMenuItem
             key={user.email}
             className={cn(
@@ -55,11 +131,11 @@ export function AccountSwitcher({
               user.id === activeUser.id &&
                 "bg-accent/50 border-l-primary border-l-2",
             )}
-            onClick={() => setActiveUser(user)}
+            onClick={() => setSelectedUserId(user.id)}
           >
             <div className="flex w-full items-center justify-between gap-2 px-1 py-1.5">
               <Avatar className="size-9 rounded-lg">
-                <AvatarImage src={user.avatar || undefined} alt={user.name} />
+                <AvatarImage src={user.avatar ?? undefined} alt={user.name} />
                 <AvatarFallback className="rounded-lg">
                   {getInitials(user.name)}
                 </AvatarFallback>
@@ -87,10 +163,29 @@ export function AccountSwitcher({
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <LogOut />
-          Log out
+        <DropdownMenuItem
+          disabled={isPending}
+          onSelect={(event) => {
+            event.preventDefault();
+            if (!isPending) {
+              handleLogout();
+            }
+          }}
+        >
+          <LogOut className={isPending ? "animate-pulse" : undefined} />
+          {isPending ? "Logging out..." : "Log out"}
         </DropdownMenuItem>
+        {impersonatedBy ? (
+          <DropdownMenuItem
+            disabled
+            className="flex-col items-start gap-0 text-xs text-destructive"
+          >
+            <span>Impersonated by {impersonatedBy}</span>
+            <span className="text-muted-foreground">
+              Logging out will return to your account.
+            </span>
+          </DropdownMenuItem>
+        ) : null}
       </DropdownMenuContent>
     </DropdownMenu>
   );

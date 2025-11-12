@@ -1,5 +1,10 @@
 "use client";
 
+import { useCallback, useTransition } from "react";
+
+import { useRouter } from "next/navigation";
+
+import { type AuthUserSummary } from "@amplify/types";
 import {
   EllipsisVertical,
   CircleUser,
@@ -7,6 +12,7 @@ import {
   MessageSquareDot,
   LogOut,
 } from "lucide-react";
+import { toast } from "sonner";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -25,17 +31,34 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { getInitials } from "@/lib/utils";
+import { logout } from "@/server/server-actions";
 
 export function NavUser({
   user,
+  impersonatedBy,
 }: {
-  readonly user: {
-    readonly name: string;
-    readonly email: string;
-    readonly avatar: string;
-  };
+  readonly user: AuthUserSummary;
+  readonly impersonatedBy?: string | null;
 }) {
   const { isMobile } = useSidebar();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const avatarSrc: string | undefined = undefined;
+
+  const handleLogout = useCallback(() => {
+    startTransition(async () => {
+      const result = await logout();
+
+      if (!result.success) {
+        toast.error(result.error);
+        return;
+      }
+
+      toast.success("Logged out successfully.");
+      router.replace("/auth/v2/login");
+      router.refresh();
+    });
+  }, [router]);
 
   return (
     <SidebarMenu>
@@ -47,7 +70,7 @@ export function NavUser({
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Avatar className="h-8 w-8 rounded-lg grayscale">
-                <AvatarImage src={user.avatar || undefined} alt={user.name} />
+                <AvatarImage src={avatarSrc} alt={user.name} />
                 <AvatarFallback className="rounded-lg">
                   {getInitials(user.name)}
                 </AvatarFallback>
@@ -70,7 +93,7 @@ export function NavUser({
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={user.avatar || undefined} alt={user.name} />
+                  <AvatarImage src={avatarSrc} alt={user.name} />
                   <AvatarFallback className="rounded-lg">
                     {getInitials(user.name)}
                   </AvatarFallback>
@@ -80,6 +103,11 @@ export function NavUser({
                   <span className="text-muted-foreground truncate text-xs">
                     {user.email}
                   </span>
+                  {impersonatedBy ? (
+                    <span className="text-destructive truncate text-xs">
+                      Impersonated by {impersonatedBy}
+                    </span>
+                  ) : null}
                 </div>
               </div>
             </DropdownMenuLabel>
@@ -99,9 +127,17 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <LogOut />
-              Log out
+            <DropdownMenuItem
+              disabled={isPending}
+              onSelect={(event) => {
+                event.preventDefault();
+                if (!isPending) {
+                  handleLogout();
+                }
+              }}
+            >
+              <LogOut className={isPending ? "animate-pulse" : undefined} />
+              {isPending ? "Logging out..." : "Log out"}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

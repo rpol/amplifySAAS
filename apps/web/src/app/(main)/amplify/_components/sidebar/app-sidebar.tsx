@@ -4,6 +4,7 @@ import type { ComponentProps } from "react";
 
 import Link from "next/link";
 
+import { type AuthUserSummary } from "@amplify/types";
 import { Command } from "lucide-react";
 
 import {
@@ -16,13 +17,19 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { APP_CONFIG } from "@/config/app-config";
-import { rootUser } from "@/data/users";
 import { sidebarItems } from "@/navigation/sidebar/sidebar-items";
 
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
 
-export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
+export function AppSidebar({
+  currentUser,
+  impersonatedBy,
+  ...props
+}: ComponentProps<typeof Sidebar> & {
+  readonly currentUser: AuthUserSummary | null;
+  readonly impersonatedBy?: string | null;
+}) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -48,7 +55,9 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
         {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={rootUser} />
+        {currentUser ? (
+          <NavUser user={currentUser} impersonatedBy={impersonatedBy} />
+        ) : null}
       </SidebarFooter>
     </Sidebar>
   );

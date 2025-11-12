@@ -11,7 +11,7 @@ export type { AuthResponse } from "@amplify/types";
 
 export function calculateCookieMaxAge(
   expiresAt: string,
-  fallbackSeconds = 60 * 60 * 24 * 7
+  fallbackSeconds = 60 * 60 * 24 * 7,
 ): number {
   // Ensure cookie expiration stays in sync with server session expiry.
   const expiresAtDate = new Date(expiresAt);

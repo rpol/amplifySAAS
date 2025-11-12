@@ -1,13 +1,10 @@
-[00:00:00.394] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.452] Server  LOG      ✓ Ready in 328ms
-[00:00:02.768] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:33.119] Server  LOG      ✓ Compiled in 34ms
-[00:02:10.092] Server  LOG      ✓ Compiled in 29ms
-[00:02:13.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:35.306] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:36.326] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:41.674] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:19.659] Server  LOG      ✓ Compiled in 30ms
-[00:14:48.158] Server  LOG      ✓ Compiled in 29ms
-[00:14:58.947] Server  LOG      ✓ Compiled in 27ms
-[00:17:06.038] Server  LOG      ✓ Compiled in 40ms
+[00:00:00.438] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.497] Server  LOG      ✓ Ready in 379ms
+[00:00:07.250] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:15.367] Server  LOG      ✓ Compiled in 310ms
+[00:02:18.556] Server  LOG      ✓ Compiled in 48ms
+[00:02:25.670] Server  LOG      ✓ Compiled in 136ms
+[00:02:48.127] Server  LOG      ✓ Compiled in 93ms
+[00:02:59.881] Server  LOG      ✓ Compiled in 102ms
+[00:03:07.501] Server  LOG      ✓ Compiled in 63ms
+[00:04:48.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

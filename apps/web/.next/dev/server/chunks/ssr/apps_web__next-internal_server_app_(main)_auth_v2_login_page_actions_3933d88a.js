@@ -8,11 +8,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$server
 ;
 ;
 ;
+;
+;
 }),
 "[project]/apps/web/.next-internal/server/app/(main)/auth/v2/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/web/src/server/server-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
+    "0065f83934fe0237621f88ef637a91915319cde884",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$server$2f$server$2d$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getCurrentSession"],
+    "00bc3a07351f2e1285eed30d86cfbd92841dcfbebd",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$server$2f$server$2d$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["logout"],
     "4056b3dfaa9f1c35fb2c2c70ef6e8e3d08dfffe293",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$web$2f$src$2f$server$2f$server$2d$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getValueFromCookie"],
     "703b8021d3e1eaea8282604251e7e6e5296de89ec6",

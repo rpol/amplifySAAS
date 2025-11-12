@@ -1,20 +1,10 @@
 import {
-  ShoppingBag,
-  Forklift,
   Mail,
   MessageSquare,
   Calendar,
   Kanban,
-  ReceiptText,
-  Users,
-  Lock,
   Fingerprint,
-  SquareArrowUpRight,
   LayoutDashboard,
-  ChartBar,
-  Banknote,
-  Gauge,
-  GraduationCap,
   type LucideIcon,
 } from "lucide-react";
 
