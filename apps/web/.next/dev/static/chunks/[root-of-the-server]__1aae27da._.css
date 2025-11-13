@@ -1300,6 +1300,10 @@
     width: 150px;
   }
 
+  .w-\[160px\] {
+    width: 160px;
+  }
+
   .w-auto {
     width: auto;
   }

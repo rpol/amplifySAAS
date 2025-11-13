@@ -1,6 +1,9 @@
 {
   "/(external)/page": "app/(external)/page.js",
+  "/(main)/amplify/coming-soon/page": "app/(main)/amplify/coming-soon/page.js",
   "/(main)/amplify/default/page": "app/(main)/amplify/default/page.js",
   "/(main)/amplify/mngmt/organization/page": "app/(main)/amplify/mngmt/organization/page.js",
+  "/(main)/amplify/mngmt/user/page": "app/(main)/amplify/mngmt/user/page.js",
+  "/(main)/auth/v2/login/page": "app/(main)/auth/v2/login/page.js",
   "/api/auth/[...betterAuth]/route": "app/api/auth/[...betterAuth]/route.js"
 }
